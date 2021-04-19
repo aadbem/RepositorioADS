@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Check general information</name>
+  <uuid>22dff283-9a13-4f46-a62d-de5a8bf644cc</uuid>
+  <documentation><![CDATA[Check the general information about a customer.]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'Data check' contain "OK"
+then
+    add "Customer information is valid" to decision ;
+else 
+    add "Customer information shows errors" to decision ;
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

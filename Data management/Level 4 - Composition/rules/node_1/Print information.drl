@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Print information</name>
+  <uuid>5bf4b5f1-72d6-4dc8-98a4-978d60aac920</uuid>
+  <documentation><![CDATA[Print customer's information.]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[print "Customer has been created: " + 'First name' + " " + 'Last name' + " at " + 'Company name' ;
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

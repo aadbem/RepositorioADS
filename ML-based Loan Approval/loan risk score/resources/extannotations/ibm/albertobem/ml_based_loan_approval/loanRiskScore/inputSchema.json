@@ -1,0 +1,34 @@
+{
+  "id" : "in_1",
+  "fields" : [ {
+    "name" : "creditScore",
+    "type" : "double",
+    "nullable" : true,
+    "jsonName" : "creditScore"
+  }, {
+    "name" : "income",
+    "type" : "double",
+    "nullable" : true,
+    "jsonName" : "income"
+  }, {
+    "name" : "loanAmount",
+    "type" : "double",
+    "nullable" : true,
+    "jsonName" : "loanAmount"
+  }, {
+    "name" : "monthDuration",
+    "type" : "double",
+    "nullable" : true,
+    "jsonName" : "monthDuration"
+  }, {
+    "name" : "rate",
+    "type" : "double",
+    "nullable" : true,
+    "jsonName" : "rate"
+  }, {
+    "name" : "yearlyReimbursement",
+    "type" : "double",
+    "nullable" : true,
+    "jsonName" : "yearlyReimbursement"
+  } ]
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Level 2 - Complex columns">
+  <name>level2-ComplexColumns</name>
+  <uuid>736a0228-b99a-4ee0-889d-b52bb207e7bf</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#63b15c94-ce64-4adc-a5b4-422442cca665"/>
+  <targetRuleProject href="../../Level%202%20-%20Complex%20columns#64507f65-5a33-4df9-85fe-1ff3f8fe78a4"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

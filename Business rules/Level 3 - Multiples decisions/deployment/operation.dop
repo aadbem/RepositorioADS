@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Level 3 - Multiples decisions">
+  <name>level3-MultiplesDecisions</name>
+  <uuid>ffad8ad1-f20f-4d2f-8063-6a61f7cb9966</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#a4032e77-c49b-44e2-ac84-56e179fcc90d"/>
+  <targetRuleProject href="../../Level%203%20-%20Multiples%20decisions#6110b19d-b459-45e6-9d2e-06b3a3471cf1"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

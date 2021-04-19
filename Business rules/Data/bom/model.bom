@@ -1,0 +1,28 @@
+
+
+public class Person
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Person"
+        property "de.generated" "true"
+{
+    public java.lang.Long age
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "age"
+                property update "true";
+    public ilog.rules.brl.SimpleDate birthDate
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "birth date"
+                property update "true";
+    public string name
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "name"
+                property update "true";
+    public Person(java.lang.Long age, ilog.rules.brl.SimpleDate birthDate, string name)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Person()
+                property "dataio.default" "true";
+}
+

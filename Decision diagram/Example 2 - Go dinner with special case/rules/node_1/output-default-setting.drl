@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>acada365-90d6-4d25-869b-9ef23a4ccad6</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[decision gets go; 
+print "Let's go, looking forward to that great evening!.";]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

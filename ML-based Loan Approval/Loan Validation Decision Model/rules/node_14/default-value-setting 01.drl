@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>default-value-setting 01</name>
+  <uuid>da546629-4908-4aeb-9790-618903d84907</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set 'Loan Risk Score' to a new risk probabilities where
+        the no risk is 0, 
+        the risk is 1 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

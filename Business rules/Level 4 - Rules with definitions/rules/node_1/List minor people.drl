@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>List minor people</name>
+  <uuid>81813fca-5e73-4a35-b16f-20b5c9102536</uuid>
+  <documentation><![CDATA[Finds all minor persons in a list.]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+set 'minor age' to 21;
+set person to a Person in 'Group of people' ;
+
+if the age of person is less than 'minor age' then 
+add the name of person + " is a minor." to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>c01e582e-8684-413d-ad36-11b547838255</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Level 1 - Build data" namespace="">
+    <extensionElements>
+        <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">Learn how to create data elements containing specific information</description>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="First name">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="First name"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="First name" typeRef="java.lang.String"/>
+    </inputData>
+    <decision id="node_1" name="Customer example">
+        <description>Create a customer and add related contract and milestones.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.String" collection="false" name="First name"/>
+                <input bomType="java.lang.String" collection="false" name="Last name"/>
+                <input bomType="java.lang.String" collection="false" name="Company name"/>
+                <output bomType="Customer" collection="false" name="Customer example"/>
+                <rule defaultRule="false" href="node_1/create%20data.drl" kind="BusinessRule" name="create data"/>
+                <rule defaultRule="false" href="node_1/add%20milestones.drl" kind="BusinessRule" name="add milestones"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Customer example" typeRef="Customer"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="Last name">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="Last name"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Last name" typeRef="java.lang.String"/>
+    </inputData>
+    <inputData id="node_3" name="Company name">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="Company name"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_3_ii" name="Company name" typeRef="java.lang.String"/>
+    </inputData>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

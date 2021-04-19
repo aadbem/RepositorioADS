@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Build</name>
+  <uuid>be73c6ff-a067-406b-8105-602cb4115088</uuid>
+  <documentation><![CDATA[Build data based on first name, last name and company name.]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to the level1 build data computed from 
+    First name being 'First name' , 
+    Last name being 'Last name' , 
+    Company name being 'Company name' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

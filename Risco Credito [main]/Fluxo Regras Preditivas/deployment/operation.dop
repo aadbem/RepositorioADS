@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Fluxo Regras Preditivas">
+  <name>fluxoRegrasPreditivas</name>
+  <uuid>9596373f-5577-44a7-b2f7-07c0695edf98</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#6dac4e96-5b98-4496-8b51-630c4116c833"/>
+  <targetRuleProject href="../../Fluxo%20Regras%20Preditivas#83c24d7c-627c-4609-8c43-ba3303614d5c"/>
+  <tags key="ProviderType">
+    <value><![CDATA[OPS]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

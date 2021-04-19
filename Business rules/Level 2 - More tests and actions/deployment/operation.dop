@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Level 2 - More tests and actions">
+  <name>level2-MoreTestsAndActions</name>
+  <uuid>3adb3bb1-91e4-4e6f-8fc1-7483bed1443b</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#5fa7047c-3235-4c50-9ba9-ab5fa1a8829d"/>
+  <targetRuleProject href="../../Level%202%20-%20More%20tests%20and%20actions#b8a0ce5b-3237-4a10-91e9-5593da57cd10"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

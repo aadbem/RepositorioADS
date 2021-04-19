@@ -1,0 +1,104 @@
+
+package ibm.albertobem.ml_based_loan_approval.loanRiskScore;
+
+
+public class Error
+        property "ads.typeId" "2"
+        property "de.generated" "true"
+{
+    public string code
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "code";
+    public string message
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "message";
+    public Error(string code, string message)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Error()
+                property "dataio.default" "true";
+}
+
+public class Input
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonPropertyOrder" "{creditScore,income,loanAmount,monthDuration,rate,yearlyReimbursement}"
+        property "de.generated" "true"
+{
+    public java.lang.Double creditscore
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "creditScore";
+    public java.lang.Double income
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "income";
+    public java.lang.Double loanamount
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "loanAmount";
+    public java.lang.Double monthduration
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "monthDuration";
+    public java.lang.Double rate
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "rate";
+    public java.lang.Double yearlyreimbursement
+                property "ads.attributeId" "6"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "yearlyReimbursement";
+    public Input(java.lang.Double creditscore, java.lang.Double income, java.lang.Double loanamount, java.lang.Double monthduration, java.lang.Double rate, java.lang.Double yearlyreimbursement)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Input()
+                property "dataio.default" "true";
+}
+
+public class Output
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonIgnoreProperties" {
+            ignoreUnknown "true"
+        }
+        property "de.generated" "true"
+{
+    public ibm.albertobem.ml_based_loan_approval.loanRiskScore.Error error
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "error";
+    public java.lang.Long predictedPaymentdefault
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "predicted_paymentDefault";
+    public java.lang.Double probability0
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "probability_0";
+    public java.lang.Double probability1
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "probability_1";
+    public Output(java.lang.Long predictedPaymentdefault, java.lang.Double probability0, java.lang.Double probability1)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Output()
+                property "dataio.default" "true";
+    public boolean inError()
+                property "de.generated" {
+                    $gen "com.ibm.decision.ml.integration.xom.InErrorTestGenerator",
+                    $target "BOM"
+                };
+    public static Output run(ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input input)
+                property "de.generated" {
+                    $gen "com.ibm.decision.ml.integration.client.wml.xom.PredictionCallGenerator",
+                    $target "BOM",
+                    deploymentId "d8144a2c-802a-42d2-a64e-6e7fa6b62990",
+                    providerName "ibm/albertobem/ML Start Provider1618872682217"
+                }
+                property pureFunction "true";
+    public static Output run(com.ibm.decision.run.RunContext runContext, ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input input)
+                property "de.generated" {
+                    $gen "com.ibm.decision.ml.integration.client.wml.xom.PredictionRunGenerator",
+                    $target "BOM",
+                    deploymentId "d8144a2c-802a-42d2-a64e-6e7fa6b62990",
+                    providerName "ibm/albertobem/ML Start Provider1618872682217"
+                }
+                property pureFunction "true";
+}
+

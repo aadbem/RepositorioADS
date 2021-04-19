@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Level 3 - Collect all values policy">
+  <name>level3-CollectAllValuesPolicy</name>
+  <uuid>26b44dd8-683b-41d6-b5c3-dd081cedd851</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#e2c271d8-2234-4ede-8ef9-3876d640ff5d"/>
+  <targetRuleProject href="../../Level%203%20-%20Collect%20all%20values%20policy#46a0b3f2-2d71-47a0-b1a7-26bae44b2799"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

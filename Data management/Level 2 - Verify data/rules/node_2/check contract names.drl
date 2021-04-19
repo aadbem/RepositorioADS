@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>check contract names</name>
+  <uuid>e6810dbb-b18e-44c6-a318-403952bedd33</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'contract' to a Contract in the contracts ;  
+
+if the name of contract is empty then 
+    add "Error: A contract name is missing." to decision;
+    set the name of contract to "UNDEFINED";
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

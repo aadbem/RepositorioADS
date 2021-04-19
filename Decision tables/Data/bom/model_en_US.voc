@@ -1,0 +1,28 @@
+
+# Customer
+Customer#concept.documentation = 
+Customer#concept.label = customer
+Customer.Customer(java.lang.String,Status)#phrase.navigation = a new {customer} where {0, name} {1, status}
+Customer.name#phrase.action = set the name of {this} to {name}
+Customer.name#phrase.navigation = {name} of {this}
+Customer.status#phrase.action = set the status of {this} to {status}
+Customer.status#phrase.clearer = clear the status of {this}
+Customer.status#phrase.navigation = {status} of {this}
+
+# Result
+Result#concept.label = result
+Result.Result(double,double)#phrase.navigation = a new {result} where {0, discount} {1, loyalty point}
+Result.discount#phrase.action = set the discount of {this} to {discount}
+Result.discount#phrase.addition_setter = add {discount} to the discount of {this}
+Result.discount#phrase.navigation = {discount} of {this}
+Result.discount#phrase.subtraction_setter = subtract {discount} from the discount of {this}
+Result.loyaltyPoints#phrase.action = set the loyalty point of {this} to {loyalty point}
+Result.loyaltyPoints#phrase.addition_setter = add {loyalty point} to the loyalty point of {this}
+Result.loyaltyPoints#phrase.navigation = {loyalty point} of {this}
+Result.loyaltyPoints#phrase.subtraction_setter = subtract {loyalty point} from the loyalty point of {this}
+
+# Status
+Status#concept.label = status
+Status.Bronze#instance.label = Bronze
+Status.Gold#instance.label = Gold
+Status.Silver#instance.label = Silver

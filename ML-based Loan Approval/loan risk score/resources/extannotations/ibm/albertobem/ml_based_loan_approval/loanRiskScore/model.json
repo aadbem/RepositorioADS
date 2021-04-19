@@ -1,0 +1,55 @@
+{
+  "metadata" : {
+    "id" : "7a3829af-ef07-457f-b1ea-1e5a23a9c67e",
+    "name" : "Loan Risk Score",
+    "modified_at" : "2021-04-19T22:28:10.982Z",
+    "created_at" : "2021-04-19T22:28:10.982Z",
+    "owner" : "IBMid-550004D38A",
+    "space_id" : "d22ec142-7de7-45ec-b40c-1f9d7b56d320"
+  },
+  "entity" : {
+    "type" : "pmml_4.4",
+    "schemas" : {
+      "input" : [ {
+        "id" : "in_1",
+        "fields" : [ {
+          "name" : "creditScore",
+          "type" : "double",
+          "nullable" : true
+        }, {
+          "name" : "income",
+          "type" : "double",
+          "nullable" : true
+        }, {
+          "name" : "loanAmount",
+          "type" : "double",
+          "nullable" : true
+        }, {
+          "name" : "monthDuration",
+          "type" : "double",
+          "nullable" : true
+        }, {
+          "name" : "rate",
+          "type" : "double",
+          "nullable" : true
+        }, {
+          "name" : "yearlyReimbursement",
+          "type" : "double",
+          "nullable" : true
+        } ]
+      } ],
+      "output" : [ {
+        "id" : "out_1",
+        "fields" : [ {
+          "name" : "paymentDefault",
+          "type" : "integer",
+          "nullable" : true
+        } ]
+      } ]
+    }
+  },
+  "id" : "7a3829af-ef07-457f-b1ea-1e5a23a9c67e",
+  "name" : "Loan Risk Score",
+  "trainedAt" : "2021-04-19T22:28:10.982Z",
+  "modifiedAt" : "2021-04-19T22:28:10.982Z"
+}

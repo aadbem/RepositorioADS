@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Status</name>
+  <uuid>c75dae00-e8e3-4cd9-badf-a004a91da86b</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if there is at least one Milestone in the milestones of the contracts 
+    where it is not true that this Milestone is completed,
+then
+    add "At least one milestone is not completed" to decision ;
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

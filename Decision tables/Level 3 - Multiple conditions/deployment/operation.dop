@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Level 3 - Multiple conditions">
+  <name>level3-MultipleConditions</name>
+  <uuid>d47e5737-2107-4923-b542-c45f84a981c8</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#113c8a82-b66a-47f4-8d7f-437032005222"/>
+  <targetRuleProject href="../../Level%203%20-%20Multiple%20conditions#905d27c9-2914-442f-83dd-79e82a437c26"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

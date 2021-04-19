@@ -1,0 +1,16 @@
+{
+  "groupOfPeople": [
+    {
+      "age": 19,
+      "name": "Jamie"
+    },
+    {
+      "age": 22,
+      "name": "Ashley"
+    },
+    {
+      "age": 45,
+      "name": "Robin"
+    }
+  ]
+}

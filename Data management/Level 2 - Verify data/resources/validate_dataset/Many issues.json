@@ -1,0 +1,26 @@
+{
+  "customerInformation": {
+    "company": "Acme Inc.",
+    "first name": "",
+    "last name": "",
+    "contracts": [
+      {
+        "name": "Contract 1",
+        "start date": "2008-04-04",
+        "value": -200000,
+        "milestones": [
+          {
+            "name": "Step 1",
+            "completed": true
+          },
+          {}
+        ]
+      },
+      {
+        "name": "Contract 2",
+        "start date": "2020-04-04",
+        "value": 0
+      }
+    ]
+  }
+}

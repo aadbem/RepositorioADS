@@ -1,0 +1,25 @@
+
+# ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Error
+ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Error#concept.label = Output error
+ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Error.Error(java.lang.String,java.lang.String)#phrase.navigation = a new {Output error} where {0, code} {1, message} 
+ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Error.code#phrase.action = set the code of {this} to {code}
+ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Error.code#phrase.navigation = {code} of {this}
+ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Error.message#phrase.action = set the message of {this} to {message}
+ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Error.message#phrase.navigation = {message} of {this}
+
+# ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Input
+ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Input#concept.label = ML model input
+ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Input.Input(java.lang.String)#phrase.navigation = a new {ML model input} where {0, input} 
+ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Input.input#phrase.action = set the input of {this} to {input}
+ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Input.input#phrase.navigation = {input} of {this}
+
+# ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Output
+ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Output#concept.label = ML model output
+ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Output.Output(java.lang.String)#phrase.navigation = a new {ML model output} where {0, output} 
+ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Output.error#phrase.action = set the error of {this} to {error}
+ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Output.error#phrase.clearer = clear the error of {this}
+ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Output.error#phrase.navigation = {error} of {this}
+ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Output.inError()#phrase.navigation = {this} is in error
+ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Output.output#phrase.action = set the output of {this} to {output}
+ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Output.output#phrase.navigation = {output} of {this}
+ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Output.run(ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Input)#phrase.navigation = predict({0})

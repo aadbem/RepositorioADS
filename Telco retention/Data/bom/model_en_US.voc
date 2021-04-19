@@ -1,0 +1,80 @@
+
+# CustomerRecord
+CustomerRecord#concept.label = customer record
+CustomerRecord.CustomerRecord(double,java.lang.String,Location,java.lang.String,java.lang.String,java.lang.Long,boolean,double)#phrase.navigation = a new {customer record} where {0, estimated income} {1, gender} {2, location} {3, marital status} {4, name} {5, children} {6, car owner} {7, age}
+CustomerRecord.estimatedIncome#phrase.action = set the estimated income of {this} to {estimated income}
+CustomerRecord.estimatedIncome#phrase.addition_setter = add {estimated income} to the estimated income of {this}
+CustomerRecord.estimatedIncome#phrase.navigation = {estimated income} of {this}
+CustomerRecord.estimatedIncome#phrase.subtraction_setter = subtract {estimated income} from the estimated income of {this}
+CustomerRecord.gender#phrase.action = set the gender of {this} to {gender}
+CustomerRecord.gender#phrase.navigation = {gender} of {this}
+CustomerRecord.location#phrase.action = set the location of {this} to {location}
+CustomerRecord.location#phrase.clearer = clear the location of {this}
+CustomerRecord.location#phrase.navigation = {location} of {this}
+CustomerRecord.maritalStatus#phrase.action = set the marital status of {this} to {marital status}
+CustomerRecord.maritalStatus#phrase.navigation = {marital status} of {this}
+CustomerRecord.name#phrase.action = set the name of {this} to {name}
+CustomerRecord.name#phrase.navigation = {name} of {this}
+CustomerRecord.newAttribute#phrase.action = set the children of {this} to {children}
+CustomerRecord.newAttribute#phrase.addition_setter = add {children} to the children of {this}
+CustomerRecord.newAttribute#phrase.navigation = {children} of {this}
+CustomerRecord.newAttribute#phrase.subtraction_setter = subtract {children} from the children of {this}
+CustomerRecord.newAttribute1#phrase.action[0] = {this} gets car owner only if {car owner}
+CustomerRecord.newAttribute1#phrase.action[1] = make it {car owner} that {this} is car owner
+CustomerRecord.newAttribute1#phrase.action[1].deprecated = true
+CustomerRecord.newAttribute1#phrase.navigation = {this} is car owner
+CustomerRecord.newAttribute1#phrase.negative_predicate = {this} is not car owner
+CustomerRecord.newAttribute1#phrase.negative_predicate_setter = {this} does not get car owner
+CustomerRecord.newAttribute1#phrase.positive_predicate_setter = {this} gets car owner
+CustomerRecord.newAttribute2#phrase.action = set the age of {this} to {age}
+CustomerRecord.newAttribute2#phrase.addition_setter = add {age} to the age of {this}
+CustomerRecord.newAttribute2#phrase.navigation = {age} of {this}
+CustomerRecord.newAttribute2#phrase.subtraction_setter = subtract {age} from the age of {this}
+
+# Location
+Location#concept.label = location
+Location.country#instance.label = country
+Location.suburban#instance.label = suburban
+Location.urban#instance.label = urban
+
+# Offer
+Offer#concept.label = offer
+Offer.Offer(java.lang.String,double)#phrase.navigation = a new {offer} where {0, message} {1, estimated cost}
+Offer.message#phrase.action = set the message of {this} to {message}
+Offer.message#phrase.navigation = {message} of {this}
+Offer.newAttribute#phrase.action = set the estimated cost of {this} to {estimated cost}
+Offer.newAttribute#phrase.addition_setter = add {estimated cost} to the estimated cost of {this}
+Offer.newAttribute#phrase.navigation = {estimated cost} of {this}
+Offer.newAttribute#phrase.subtraction_setter = subtract {estimated cost} from the estimated cost of {this}
+
+# RatePlan
+RatePlan#concept.label = rate plan
+RatePlan.basic#instance.label = Basic
+RatePlan.essentials#instance.label = Essentials
+RatePlan.gold#instance.label = Gold
+RatePlan.premium#instance.label = Premium
+
+# Subscription
+Subscription#concept.label = subscription
+Subscription.Subscription(double,double,double,java.lang.String,RatePlan,double)#phrase.navigation = a new {subscription} where {0, international calls} {1, local calls} {2, long distance calls} {3, payment method} {4, rate plan} {5, usage}
+Subscription.internationalCalls#phrase.action = set the international calls of {this} to {international calls}
+Subscription.internationalCalls#phrase.addition_setter = add {international calls} to the international calls of {this}
+Subscription.internationalCalls#phrase.navigation = {international calls} of {this}
+Subscription.internationalCalls#phrase.subtraction_setter = subtract {international calls} from the international calls of {this}
+Subscription.localCalls#phrase.action = set the local calls of {this} to {local calls}
+Subscription.localCalls#phrase.addition_setter = add {local calls} to the local calls of {this}
+Subscription.localCalls#phrase.navigation = {local calls} of {this}
+Subscription.localCalls#phrase.subtraction_setter = subtract {local calls} from the local calls of {this}
+Subscription.longDistanceCalls#phrase.action = set the long distance calls of {this} to {long distance calls}
+Subscription.longDistanceCalls#phrase.addition_setter = add {long distance calls} to the long distance calls of {this}
+Subscription.longDistanceCalls#phrase.navigation = {long distance calls} of {this}
+Subscription.longDistanceCalls#phrase.subtraction_setter = subtract {long distance calls} from the long distance calls of {this}
+Subscription.paymentMethod#phrase.action = set the payment method of {this} to {payment method}
+Subscription.paymentMethod#phrase.navigation = {payment method} of {this}
+Subscription.ratePlan#phrase.action = set the rate plan of {this} to {rate plan}
+Subscription.ratePlan#phrase.clearer = clear the rate plan of {this}
+Subscription.ratePlan#phrase.navigation = {rate plan} of {this}
+Subscription.usage#phrase.action = set the usage of {this} to {usage}
+Subscription.usage#phrase.addition_setter = add {usage} to the usage of {this}
+Subscription.usage#phrase.navigation = {usage} of {this}
+Subscription.usage#phrase.subtraction_setter = subtract {usage} from the usage of {this}

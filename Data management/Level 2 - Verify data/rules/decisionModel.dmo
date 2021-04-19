@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>aeec9e55-5b17-4625-91cc-ec7795b1684b</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Level 2 - Verify data" namespace="">
+    <extensionElements>
+        <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">This project shows an example of data cleansing. Customer information is analyzed to identify issues in the different parts of the data structure (contracts, milestones, etc.).</description>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Customer information">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Customer" collection="false" name="Customer information"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Customer information" typeRef="Customer"/>
+    </inputData>
+    <decision id="node_1" name="Check customer information">
+        <description>Check general information of the customer.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Customer" collection="false" name="Customer information"/>
+                <output bomType="java.lang.String" collection="true" name="Check customer information"/>
+                <rule defaultRule="false" href="node_1/check%20first%20name.drl" kind="BusinessRule" name="check first name"/>
+                <rule defaultRule="false" href="node_1/check%20last%20name.drl" kind="BusinessRule" name="check last name"/>
+                <rule defaultRule="false" href="node_1/check%20company%20name.drl" kind="BusinessRule" name="check company name"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Check customer information" typeRef="java.lang.String[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_2" name="Check contracts">
+        <description>Check the contracts associated with this customer.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Customer" collection="false" name="Customer information"/>
+                <input bomType="java.lang.String" collection="true" name="Check customer information"/>
+                <output bomType="java.lang.String" collection="true" name="Check contracts"/>
+                <rule defaultRule="false" href="node_2/copy%20input%20to%20output.drl" kind="BusinessRule" name="copy input to output"/>
+                <rule defaultRule="false" href="node_2/check%20contract%20names.drl" kind="BusinessRule" name="check contract names"/>
+                <rule defaultRule="false" href="node_2/check%20contract%20date.drl" kind="BusinessRule" name="check contract date"/>
+                <rule defaultRule="false" href="node_2/check%20contract%20value.drl" kind="BusinessRule" name="check contract value"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_2_ii" name="Check contracts" typeRef="java.lang.String[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_3" name="Check milestones">
+        <description>For each contract, verify the validity of the milestones.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Customer" collection="false" name="Customer information"/>
+                <input bomType="java.lang.String" collection="true" name="Check contracts"/>
+                <output bomType="java.lang.String" collection="true" name="Check milestones"/>
+                <rule defaultRule="false" href="node_3/copy%20input%20to%20output.drl" kind="BusinessRule" name="copy input to output"/>
+                <rule defaultRule="false" href="node_3/Check%20milestone%20names.drl" kind="BusinessRule" name="Check milestone names"/>
+                <rule defaultRule="false" href="node_3/Check%20lack%20of%20milestones.drl" kind="BusinessRule" name="Check lack of milestones"/>
+                <rule defaultRule="true" href="node_3/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="Check milestones" typeRef="java.lang.String[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

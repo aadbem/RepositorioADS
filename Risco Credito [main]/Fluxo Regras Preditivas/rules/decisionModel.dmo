@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>fluxoRegrasPreditivas</name>
+  <uuid>6dac4e96-5b98-4496-8b51-630c4116c833</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="Decisions" name="fluxoRegrasPreditivas" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="input" name="Input type">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="Input type"/>
+            </initialization>
+        </extensionElements>
+        <variable id="input_ii" name="Input type" typeRef="java.lang.String"/>
+    </inputData>
+    <decision id="input-mapping" name="Input mapping">
+        <description>ML model input</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.String" collection="false" name="Input type"/>
+                <output bomType="ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Input" collection="false" name="Input mapping"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="input_mapping_ii" name="Input mapping" typeRef="ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Input"/>
+        <informationRequirement>
+            <requiredInput href="#input"/>
+        </informationRequirement>
+    </decision>
+    <decision id="output" name="ML model invocation">
+        <description>ML model output</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Input" collection="false" name="Input mapping"/>
+                <output bomType="ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Output" collection="false" name="ML model invocation"/>
+                <rule defaultRule="false" href="decisionModel.drl" kind="BusinessRule" name="Prediction"/>
+            </ruleset>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.predictionInvocation"><![CDATA[true]]></property>
+            </properties>
+        </extensionElements>
+        <variable id="output_ii" name="ML model invocation" typeRef="ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Output"/>
+        <informationRequirement>
+            <requiredInput href="#input-mapping"/>
+        </informationRequirement>
+    </decision>
+    <decision id="output-mapping" name="Output mapping">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ibm.albertobem.risco_credito__main_.fluxoRegrasPreditivas.Output" collection="false" name="ML model invocation"/>
+                <output bomType="java.lang.String" collection="false" name="Output mapping"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="output_mapping_ii" name="Output mapping" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#output"/>
+        </informationRequirement>
+    </decision>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

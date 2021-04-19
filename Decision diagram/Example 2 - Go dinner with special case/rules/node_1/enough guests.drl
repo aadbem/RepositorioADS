@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>enough guests</name>
+  <uuid>6eada188-8502-41e8-b426-85252b42cca1</uuid>
+  <documentation><![CDATA[Decide not to go because of the the fact that the number of guests is not enough.]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'Enough available guests' is false
+then
+    decision does not get go ;
+    add "Not enough available guests." to the explanations of decision ;
+
+   
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

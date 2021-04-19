@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>e2c271d8-2234-4ede-8ef9-3876d640ff5d</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Level 1 - First rule applies" namespace="">
+    <extensionElements>
+        <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">Rules execute in the order in which they are listed in the decision node. As soon as a rule applies and makes a decision, this decision is final for the impacted attributes, and the execution in the decision node stops. </description>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Yearly income">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Long" collection="false" name="Yearly income"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Yearly income" typeRef="java.lang.Long"/>
+    </inputData>
+    <decision id="node_1" name="Pre approval">
+        <description>Pre approve the loan based on the credit score, loan amount, birth date and yearly income.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                <input bomType="java.lang.Long" collection="false" name="Yearly income"/>
+                <input bomType="java.lang.Long" collection="false" name="Credit score"/>
+                <input bomType="java.lang.Long" collection="false" name="Loan amount"/>
+                <input bomType="ilog.rules.brl.SimpleDate" collection="false" name="Birth date"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Pre approval"/>
+                <rule defaultRule="false" href="node_1/score.drl" kind="BusinessRule" name="score"/>
+                <rule defaultRule="false" href="node_1/age.drl" kind="BusinessRule" name="age"/>
+                <rule defaultRule="false" href="node_1/amount.drl" kind="BusinessRule" name="amount"/>
+                <rule defaultRule="false" href="node_1/income.drl" kind="BusinessRule" name="income"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Pre approval" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="Credit score">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Long" collection="false" name="Credit score"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Credit score" typeRef="java.lang.Long"/>
+    </inputData>
+    <inputData id="node_3" name="Loan amount">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Long" collection="false" name="Loan amount"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_3_ii" name="Loan amount" typeRef="java.lang.Long"/>
+    </inputData>
+    <inputData id="node_4" name="Birth date">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="ilog.rules.brl.SimpleDate" collection="false" name="Birth date"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_4_ii" name="Birth date" typeRef="ilog.rules.brl.SimpleDate"/>
+    </inputData>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

@@ -1,0 +1,86 @@
+
+
+public class Answer
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "answer"
+        property "de.generated" "true"
+{
+    public java.util.List explanation domain 0,* class string
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "explanation"
+                property update "true";
+    public boolean go
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "go"
+                property update "true";
+    public Answer(java.util.List explanation domain 0,* class string, 
+        boolean go)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Answer()
+                property "dataio.default" "true";
+    public void addTo_explanation(string explanation)
+                property collectionAttribute "explanation"
+                property update "true";
+    public void clear_explanation()
+                property collectionAttribute "explanation"
+                property update "true";
+    public void removeFrom_explanation(string explanation)
+                property collectionAttribute "explanation"
+                property update "true";
+    public void set_explanation(java.util.Collection explanation domain 0,* class string)
+                property collectionAttribute "explanation"
+                property update "true";
+}
+
+public class Finance
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "finance"
+        property "de.generated" "true"
+{
+    public double balance
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "balance"
+                property update "true";
+    public double debits
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "debits"
+                property update "true";
+    public Finance(double balance, double debits)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Finance()
+                property "dataio.default" "true";
+}
+
+public class Weather
+        extends java.lang.Enum
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "weather"
+        property "de.generated" "true"
+{
+    domain {static clouds, static fair, static heavyRain, static rain, static storm, static sun}
+    public static final readonly Weather clouds
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Clouds";
+    public static final readonly Weather fair
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Fair";
+    public static final readonly Weather heavyRain
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Heavy rain";
+    public static final readonly Weather rain
+                property "ads.attributeId" "6"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Rain";
+    public static final readonly Weather storm
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Storm";
+    public static final readonly Weather sun
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Sun";
+}
+

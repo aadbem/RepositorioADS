@@ -13,7 +13,17 @@
     <dependencies>
         <dependency>
             <groupId>ibm.albertobem.risco_credito__main_</groupId>
+            <artifactId>fluxoRegrasPreditivas</artifactId>
+            <version>LATEST-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>ibm.albertobem.risco_credito__main_</groupId>
             <artifactId>teste</artifactId>
+            <version>LATEST-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>ibm.albertobem.risco_credito__main_</groupId>
+            <artifactId>teste_Preditivas</artifactId>
             <version>LATEST-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -45,7 +55,25 @@
                             <artifactItems>
                                 <artifactItem>
                                     <groupId>ibm.albertobem.risco_credito__main_</groupId>
+                                    <artifactId>fluxoRegrasPreditivas</artifactId>
+                                    <version>LATEST-SNAPSHOT</version>
+                                    <type>jar</type>
+                                    <overWrite>false</overWrite>
+                                    <includes>**/*.class</includes>
+                                    <outputDirectory>${project.build.directory}/classes</outputDirectory>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>ibm.albertobem.risco_credito__main_</groupId>
                                     <artifactId>teste</artifactId>
+                                    <version>LATEST-SNAPSHOT</version>
+                                    <type>jar</type>
+                                    <overWrite>false</overWrite>
+                                    <includes>**/*.class</includes>
+                                    <outputDirectory>${project.build.directory}/classes</outputDirectory>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>ibm.albertobem.risco_credito__main_</groupId>
+                                    <artifactId>teste_Preditivas</artifactId>
                                     <version>LATEST-SNAPSHOT</version>
                                     <type>jar</type>
                                     <overWrite>false</overWrite>

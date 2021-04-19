@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>too high risk</name>
+  <uuid>ba7d9134-6015-4373-a832-8d2a39343ec0</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if the probability of 'Risk Score' is more than 0.3
+  and the payment default of 'Risk Score' equals 1
+  then
+      decision does not get approved; 
+      set the message of decision to "The loan is rejected because the risk score is too high." ;
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

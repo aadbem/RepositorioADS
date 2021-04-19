@@ -1,0 +1,64 @@
+
+
+public class Customer
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "customer"
+        property "de.generated" "true"
+{
+    public string name
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "name"
+                property update "true";
+    public Status status
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "status"
+                property update "true";
+    public Customer(string name, Status status)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Customer()
+                property "dataio.default" "true";
+}
+
+public class Result
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "result"
+        property "de.generated" "true"
+{
+    public double discount
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "discount"
+                property update "true";
+    public double loyaltyPoints
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "loyalty points"
+                property update "true";
+    public Result(double discount, double loyaltyPoints)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Result()
+                property "dataio.default" "true";
+}
+
+public class Status
+        extends java.lang.Enum
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "status"
+        property "de.generated" "true"
+{
+    domain {static Bronze, static Gold, static Silver}
+    public static final readonly Status Bronze
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Bronze";
+    public static final readonly Status Gold
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Gold";
+    public static final readonly Status Silver
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Silver";
+}
+

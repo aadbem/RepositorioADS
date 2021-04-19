@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Level 4 - Composition">
+  <name>level4-Composition</name>
+  <uuid>4fa07c25-7f32-4f5b-8d03-22a118207fc2</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#604ab544-d681-47ee-9680-4ffc00a1e20b"/>
+  <targetRuleProject href="../../Level%204%20-%20Composition#68d94677-99b2-4246-95d4-a9580b517e2f"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

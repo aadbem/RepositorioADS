@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>size importance</name>
+  <uuid>a24d1899-1dbd-44a9-af6d-0050820fe256</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+
+-- Get prediction from predictive model
+set LTV to the customer lifetime value computed from
+      Customer being Customer, 
+      Subscription being Subscription ;
+
+-- Get churn prediction from predictive model
+set Churn to the customer churn computed from
+      Customer being Customer, 
+      Subscription being Subscription ;
+
+-- Estimate margin
+set 'monthly value' to LTV / (5*12);
+-- Estimate total value 
+set value to 'monthly value' * Churn ;
+
+then
+-- Output monthly budget to maximize retention
+set decision to value ;
+print "LTV: "+LTV;
+print "Churn: "+Churn;
+print "Value: "+ decision;
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

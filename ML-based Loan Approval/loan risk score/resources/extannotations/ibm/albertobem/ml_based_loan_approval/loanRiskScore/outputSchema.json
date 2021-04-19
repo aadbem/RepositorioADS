@@ -1,0 +1,19 @@
+{
+  "id" : "default_schema_id",
+  "fields" : [ {
+    "name" : "probability_0",
+    "type" : "double",
+    "nullable" : true,
+    "jsonName" : "probability_0"
+  }, {
+    "name" : "probability_1",
+    "type" : "double",
+    "nullable" : true,
+    "jsonName" : "probability_1"
+  }, {
+    "name" : "predicted_paymentDefault",
+    "type" : "integer",
+    "nullable" : true,
+    "jsonName" : "predicted_paymentDefault"
+  } ]
+}

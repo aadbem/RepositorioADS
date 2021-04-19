@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Task2 Adding nodes">
+  <name>task2AddingNodes</name>
+  <uuid>598358ae-5b8a-40ea-a604-e4377caf9b4e</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#0476441e-01e7-46f3-91e6-097c60f55847"/>
+  <targetRuleProject href="../../Task2%20Adding%20nodes#43c78d4d-98de-4154-bda9-67637be97a5e"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

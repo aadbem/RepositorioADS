@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Level 1 - Simple table">
+  <name>level1-SimpleTable</name>
+  <uuid>4134ecab-6817-465e-8425-c3551192bd05</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#cf62d7cf-e794-4a91-ae14-fe6b59319c21"/>
+  <targetRuleProject href="../../Level%201%20-%20Simple%20table#faf68c35-696a-431a-9b99-301425bf7315"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

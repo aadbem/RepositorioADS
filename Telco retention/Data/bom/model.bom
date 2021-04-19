@@ -1,0 +1,147 @@
+
+
+public class CustomerRecord
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "customer record"
+        property "de.generated" "true"
+{
+    public double estimatedIncome
+                property "ads.attributeId" "6"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "estimated income"
+                property update "true";
+    public string gender
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "gender"
+                property update "true";
+    public Location location
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "location"
+                property update "true";
+    public string maritalStatus
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "marital status"
+                property update "true";
+    public string name
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "name"
+                property update "true";
+    public java.lang.Long newAttribute
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "children"
+                property update "true";
+    public boolean newAttribute1
+                property "ads.attributeId" "7"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "car owner"
+                property update "true";
+    public double newAttribute2
+                property "ads.attributeId" "8"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "age"
+                property update "true";
+    public CustomerRecord(double estimatedIncome, string gender, Location location, string maritalStatus, string name, java.lang.Long newAttribute, boolean newAttribute1, double newAttribute2)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public CustomerRecord()
+                property "dataio.default" "true";
+}
+
+public class Location
+        extends java.lang.Enum
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "location"
+        property "de.generated" "true"
+{
+    domain {static country, static suburban, static urban}
+    public static final readonly Location country
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "country";
+    public static final readonly Location suburban
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "suburban";
+    public static final readonly Location urban
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "urban";
+}
+
+public class Offer
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "offer"
+        property "de.generated" "true"
+{
+    public string message
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "message"
+                property update "true";
+    public double newAttribute
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "estimated cost"
+                property update "true";
+    public Offer(string message, double newAttribute)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Offer()
+                property "dataio.default" "true";
+}
+
+public class RatePlan
+        extends java.lang.Enum
+        property "ads.typeId" "4"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "rate plan"
+        property "de.generated" "true"
+{
+    domain {static basic, static essentials, static gold, static premium}
+    public static final readonly RatePlan basic
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Basic";
+    public static final readonly RatePlan essentials
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Essentials";
+    public static final readonly RatePlan gold
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Gold";
+    public static final readonly RatePlan premium
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Premium";
+}
+
+public class Subscription
+        property "ads.typeId" "5"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "subscription"
+        property "de.generated" "true"
+{
+    public double internationalCalls
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "international calls"
+                property update "true";
+    public double localCalls
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "local calls"
+                property update "true";
+    public double longDistanceCalls
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "long distance calls"
+                property update "true";
+    public string paymentMethod
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "payment method"
+                property update "true";
+    public RatePlan ratePlan
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "rate plan"
+                property update "true";
+    public double usage
+                property "ads.attributeId" "6"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "usage"
+                property update "true";
+    public Subscription(double internationalCalls, double localCalls, double longDistanceCalls, string paymentMethod, RatePlan ratePlan, double usage)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Subscription()
+                property "dataio.default" "true";
+}
+

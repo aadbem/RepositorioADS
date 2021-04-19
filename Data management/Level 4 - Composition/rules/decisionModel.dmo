@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>604ab544-d681-47ee-9680-4ffc00a1e20b</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Level 4 - Composition" namespace="">
+    <extensionElements>
+        <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">A model can invoke other models. This example calls a decision that creates a data structure, then it verifies and analyzes it, and then displays a summary.</description>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Company name">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="Company name"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Company name" typeRef="java.lang.String"/>
+    </inputData>
+    <decision id="node_1" name="Customer">
+        <description>Build data based on first name, last name and company name and print customer's information.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.String" collection="false" name="Company name"/>
+                <input bomType="java.lang.String" collection="false" name="First name"/>
+                <input bomType="java.lang.String" collection="false" name="Last name"/>
+                <output bomType="Customer" collection="false" name="Customer"/>
+                <rule defaultRule="false" href="node_1/Build.drl" kind="BusinessRule" name="Build"/>
+                <rule defaultRule="false" href="node_1/Print%20information.drl" kind="BusinessRule" name="Print information"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Customer" typeRef="Customer"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_2"/>
+        </knowledgeRequirement>
+    </decision>
+    <inputData id="node_3" name="First name">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="First name"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_3_ii" name="First name" typeRef="java.lang.String"/>
+    </inputData>
+    <inputData id="node_4" name="Last name">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="Last name"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_4_ii" name="Last name" typeRef="java.lang.String"/>
+    </inputData>
+    <decision id="node_6" name="Data check">
+        <description>Verify customer's information and print the results.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Customer" collection="false" name="Customer"/>
+                <output bomType="java.lang.String" collection="true" name="Data check"/>
+                <rule defaultRule="false" href="node_6/Verify.drl" kind="BusinessRule" name="Verify"/>
+                <rule defaultRule="false" href="node_6/Print%20results.drl" kind="BusinessRule" name="Print results"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_6_ii" name="Data check" typeRef="java.lang.String[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_5"/>
+        </knowledgeRequirement>
+    </decision>
+    <decision id="node_7" name="Analysis">
+        <description>Check and analyze the information about a customer.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Customer" collection="false" name="Customer"/>
+                <input bomType="java.lang.String" collection="true" name="Data check"/>
+                <output bomType="java.lang.String" collection="true" name="Analysis"/>
+                <rule defaultRule="false" href="node_7/Check%20general%20information.drl" kind="BusinessRule" name="Check general information"/>
+                <rule defaultRule="false" href="node_7/Analyze%20information.drl" kind="BusinessRule" name="Analyze information"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_7_ii" name="Analysis" typeRef="java.lang.String[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_6"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_8"/>
+        </knowledgeRequirement>
+    </decision>
+    <businessKnowledgeModel id="node_2" name="Level 1 - Build data">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Level 1 - Build data" typeRef="Customer"/>
+        <encapsulatedLogic typeRef="Customer">
+            <formalParameter name="firstName" typeRef="java.lang.String"/>
+            <formalParameter name="lastName" typeRef="java.lang.String"/>
+            <formalParameter name="companyName" typeRef="java.lang.String"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"decisions.education.data_management.level1_builddata.Level1_BuildData"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(java.lang.String,java.lang.String,java.lang.String)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id="node_5" name="Level 2 - Verify data">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Level 2 - Verify data" typeRef="java.lang.String[]"/>
+        <encapsulatedLogic typeRef="java.lang.String[]">
+            <formalParameter name="customerInformation" typeRef="Customer"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"decisions.education.data_management.level2_verifydata.Level2_VerifyData"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(Customer)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+    <businessKnowledgeModel id="node_8" name="Level 3 - Analyze data">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[decision]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Level 3 - Analyze data" typeRef="java.lang.String[]"/>
+        <encapsulatedLogic typeRef="java.lang.String[]">
+            <formalParameter name="customerInformation" typeRef="Customer"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"decisions.education.data_management.level3_analyzedata.Level3_AnalyzeData"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(Customer)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

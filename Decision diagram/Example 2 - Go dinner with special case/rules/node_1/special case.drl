@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>special case</name>
+  <uuid>e44bc84e-8b69-4e3a-90bd-d4e82ea84f66</uuid>
+  <documentation><![CDATA[If everyone can join, we now ignore the weather forecast. There is nothing like a full attendance!]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'Enough budget' and 'Full attendance'
+then
+    decision gets go ; 
+    add "Full attendance." to the explanations of decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

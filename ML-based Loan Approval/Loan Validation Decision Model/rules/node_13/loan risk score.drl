@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>loan risk score</name>
+  <uuid>7ae9eb64-c5f7-4c99-b295-a6c0b6298e94</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to the loan risk score computed from 
+Borrower being Borrower , 
+Loan being Loan; ]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

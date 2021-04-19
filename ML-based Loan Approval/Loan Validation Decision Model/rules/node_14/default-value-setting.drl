@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>default-value-setting</name>
+  <uuid>6ca6b334-7af5-4288-aa64-cf93e2f3ad58</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set 'Loan risk Score' to <a string> ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

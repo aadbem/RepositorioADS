@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>all guests are available</name>
+  <uuid>3b72773b-1899-417f-8a92-8d98e6d46786</uuid>
+  <documentation><![CDATA[check that all guests are available.]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions 
+    set available to Guests where each boolean is true ;
+
+if the number of elements in available equals the number of elements in Guests
+then
+    set decision to true ;
+else
+    set decision to false;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

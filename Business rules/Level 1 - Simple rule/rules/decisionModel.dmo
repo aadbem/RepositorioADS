@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>e347753c-8074-4e73-bb04-b66f420a7e2b</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Level 1 - Simple rule" namespace="">
+    <extensionElements>
+        <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">A very simple business rule.</description>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Name">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="Name"/>
+            </initialization>
+        </extensionElements>
+        <variable id="name_ii" name="Name" typeRef="java.lang.String"/>
+    </inputData>
+    <decision id="node_1" name="Hello decision">
+        <description>First decision node to say hello.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.String" collection="false" name="Name"/>
+                <output bomType="java.lang.String" collection="false" name="Hello decision"/>
+                <rule defaultRule="false" href="node_1/Simple%20rule.drl" kind="BusinessRule" name="Simple rule"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="helloDecision_ii" name="Hello decision" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

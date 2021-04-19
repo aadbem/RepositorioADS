@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>budget</name>
+  <uuid>7ee06b34-1da0-4e3e-aec6-bfe74579cb30</uuid>
+  <documentation><![CDATA[Decide not to go because of the budget.]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'Enough budget' is false
+then
+    decision does not get go ;
+    add "Not enough money." to the explanations of decision ;
+
+   
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

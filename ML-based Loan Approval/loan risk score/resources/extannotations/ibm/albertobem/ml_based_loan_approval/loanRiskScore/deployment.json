@@ -1,0 +1,28 @@
+{
+  "metadata" : {
+    "id" : "d8144a2c-802a-42d2-a64e-6e7fa6b62990",
+    "name" : "loan_risk_score",
+    "modified_at" : "2021-04-19T22:29:30.046Z",
+    "created_at" : "2021-04-19T22:29:30.046Z",
+    "owner" : "IBMid-550004D38A",
+    "space_id" : "d22ec142-7de7-45ec-b40c-1f9d7b56d320"
+  },
+  "entity" : {
+    "name" : "loan_risk_score",
+    "space_id" : "d22ec142-7de7-45ec-b40c-1f9d7b56d320",
+    "custom" : { },
+    "online" : { },
+    "status" : {
+      "state" : "ready",
+      "online_url" : {
+        "url" : "https://us-south.ml.cloud.ibm.com/ml/v4/deployments/d8144a2c-802a-42d2-a64e-6e7fa6b62990/predictions"
+      }
+    },
+    "asset" : {
+      "id" : "7a3829af-ef07-457f-b1ea-1e5a23a9c67e"
+    }
+  },
+  "name" : "loan_risk_score",
+  "status" : "ready",
+  "deployedAt" : "2021-04-19T22:29:30.046Z"
+}

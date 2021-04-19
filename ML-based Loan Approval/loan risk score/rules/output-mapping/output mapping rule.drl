@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output mapping rule</name>
+  <uuid>be84703a-b412-43db-8ab3-fe04bea192fa</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 'ML model invocation' is in error 
+ then 
+set decision to a new risk probabilities where
+    the payment default is 0,
+        the probability is 1 ;
+else 
+set decision to a new risk probabilities where
+    the payment default is the predicted paymentdefault of 'ML model invocation' , 
+    the probability is max ( the probability0 of 'ML model invocation' , the probability1 of 'ML model invocation');
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

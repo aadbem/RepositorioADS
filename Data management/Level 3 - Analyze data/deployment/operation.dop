@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Level 3 - Analyze data">
+  <name>level3-AnalyzeData</name>
+  <uuid>50f5455f-9cea-47a0-b0e5-c5930393a2b0</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#2693b16f-e1d1-458f-9cca-8eda24d799fb"/>
+  <targetRuleProject href="../../Level%203%20-%20Analyze%20data#607de560-17fe-44de-9196-c85696780b1d"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>weather</name>
+  <uuid>b35e3517-3652-4b45-9693-e4832c218b19</uuid>
+  <documentation><![CDATA[Decide not to go because of the weather.]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'Acceptable weather' is false 
+then
+    decision does not get go ;
+    add "Bad weather." to the explanations of decision ;
+
+   
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

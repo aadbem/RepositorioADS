@@ -1,0 +1,46 @@
+
+# Contract
+Contract#concept.documentation = 
+Contract#concept.label = Contract
+Contract.Contract(java.util.List,java.lang.String,ilog.rules.brl.SimpleDate,double)#phrase.navigation = a new {Contract} where {0, milestone} {1, name} {2, start date} {3, value}
+Contract.addTo_milestones(Milestone)#phrase.action = add {0} to the milestones of {this}
+Contract.clear_milestones()#phrase.action = clear the milestones of {this}
+Contract.milestones#phrase.action = set the milestones of {this} to {milestone}
+Contract.milestones#phrase.navigation = {milestone} of {this}
+Contract.name#phrase.action = set the name of {this} to {name}
+Contract.name#phrase.navigation = {name} of {this}
+Contract.removeFrom_milestones(Milestone)#phrase.action = remove {0} from the milestones of {this}
+Contract.startDate#phrase.action = set the start date of {this} to {start date}
+Contract.startDate#phrase.navigation = {start date} of {this}
+Contract.value#phrase.action = set the value of {this} to {value}
+Contract.value#phrase.addition_setter = add {value} to the value of {this}
+Contract.value#phrase.navigation = {value} of {this}
+Contract.value#phrase.subtraction_setter = subtract {value} from the value of {this}
+
+# Customer
+Customer#concept.label = Customer
+Customer.Customer(java.lang.String,java.util.List,java.lang.String,java.lang.String)#phrase.navigation = a new {Customer} where {0, company} {1, contract} {2, first name} {3, last name}
+Customer.addTo_contracts(Contract)#phrase.action = add {0} to the contracts of {this}
+Customer.clear_contracts()#phrase.action = clear the contracts of {this}
+Customer.company#phrase.action = set the company of {this} to {company}
+Customer.company#phrase.navigation = {company} of {this}
+Customer.contracts#phrase.action = set the contracts of {this} to {contract}
+Customer.contracts#phrase.navigation = {contract} of {this}
+Customer.firstName#phrase.action = set the first name of {this} to {first name}
+Customer.firstName#phrase.navigation = {first name} of {this}
+Customer.lastName#phrase.action = set the last name of {this} to {last name}
+Customer.lastName#phrase.navigation = {last name} of {this}
+Customer.removeFrom_contracts(Contract)#phrase.action = remove {0} from the contracts of {this}
+
+# Milestone
+Milestone#concept.label = Milestone
+Milestone.Milestone(boolean,java.lang.String)#phrase.navigation = a new {Milestone} where {0, completed} {1, name}
+Milestone.completed#phrase.action[0] = {this} gets completed only if {completed}
+Milestone.completed#phrase.action[1] = make it {completed} that {this} is completed
+Milestone.completed#phrase.action[1].deprecated = true
+Milestone.completed#phrase.navigation = {this} is completed
+Milestone.completed#phrase.negative_predicate = {this} is not completed
+Milestone.completed#phrase.negative_predicate_setter = {this} does not get completed
+Milestone.completed#phrase.positive_predicate_setter = {this} gets completed
+Milestone.name#phrase.action = set the name of {this} to {name}
+Milestone.name#phrase.navigation = {name} of {this}

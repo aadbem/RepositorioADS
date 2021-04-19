@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>check first name</name>
+  <uuid>d508992b-65c3-46ce-82b8-bd13bed5cf59</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the first name is empty
+then
+    add "Warning: Customer name is incomplete (missing first name)." to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

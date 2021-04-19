@@ -1,0 +1,28 @@
+{
+  "metadata" : {
+    "id" : "80d6eb0b-c8ff-4fe6-9e6f-c02d35b3cd98",
+    "name" : "Customer LTV deployment",
+    "modified_at" : "2020-12-09T15:48:12.202Z",
+    "created_at" : "2020-12-09T15:48:12.202Z",
+    "owner" : "IBMid-550002E5KH",
+    "space_id" : "87f742c7-f7be-438c-919b-a32bd3374a48"
+  },
+  "entity" : {
+    "name" : "Customer LTV deployment",
+    "space_id" : "87f742c7-f7be-438c-919b-a32bd3374a48",
+    "custom" : { },
+    "online" : { },
+    "status" : {
+      "state" : "ready",
+      "online_url" : {
+        "url" : "https://us-south.ml.cloud.ibm.com/ml/v4/deployments/80d6eb0b-c8ff-4fe6-9e6f-c02d35b3cd98/predictions"
+      }
+    },
+    "asset" : {
+      "id" : "9fbf1fcd-3969-4933-91e4-6536da1b18e3"
+    }
+  },
+  "name" : "Customer LTV deployment",
+  "status" : "ready",
+  "deployedAt" : "2020-12-09T15:48:12.202Z"
+}

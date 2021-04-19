@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Task4 Using rule policy">
+  <name>task4UsingRulePolicy</name>
+  <uuid>8d477d08-dd9a-4da1-bcc0-39dd0eecbf0c</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#0bab9774-977e-4ccd-a53c-ffc806db9f71"/>
+  <targetRuleProject href="../../Task4%20Using%20rule%20policy#21df25b5-865f-4504-b286-a30162fd8f79"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

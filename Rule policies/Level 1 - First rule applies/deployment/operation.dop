@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Level 1 - First rule applies">
+  <name>level1-FirstRuleApplies</name>
+  <uuid>26b44dd8-683b-41d6-b5c3-dd081cedd851</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#e2c271d8-2234-4ede-8ef9-3876d640ff5d"/>
+  <targetRuleProject href="../../Level%201%20-%20First%20rule%20applies#167bc645-ef3d-452d-9268-f220134404a9"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

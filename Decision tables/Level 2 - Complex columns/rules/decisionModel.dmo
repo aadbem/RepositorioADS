@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>63b15c94-ce64-4adc-a5b4-422442cca665</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="3 Complex columns" namespace="">
+    <extensionElements>
+        <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">Condition and action columns can be more complex. There can be pre-conditions as well.</description>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Messages">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="true" name="Messages"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Messages" typeRef="java.lang.String[]"/>
+    </inputData>
+    <decision id="node_1" name="Decision">
+        <description>Decide to proceed or not depending on the key words in the message.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.String" collection="true" name="Messages"/>
+                <output bomType="java.lang.String" collection="true" name="Decision"/>
+                <rule defaultRule="false" href="node_1/Decision%20table%2001.dmt" kind="DecisionTable" name="Decision table"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Decision" typeRef="java.lang.String[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

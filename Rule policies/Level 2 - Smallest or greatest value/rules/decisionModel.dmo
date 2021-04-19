@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>f2865031-84fc-476e-bb0b-cd3d6e3510fb</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Level 2 - Smallest or greatest value" namespace="">
+    <extensionElements>
+        <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">All applicable rules execute and the order of execution does not matter. If you use the smallest (or greatest) value policy, the value of the decision is set to the minimum (or maximum) value available among the values that are obtained by the applicable rules.</description>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="List 2">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Double" collection="true" name="List 2"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="List 2" typeRef="java.lang.Double[]"/>
+    </inputData>
+    <decision id="node_1" name="Minimum">
+        <description>Choose the smallest value from a list.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="min">
+                <input bomType="java.lang.Double" collection="true" name="List 2"/>
+                <input bomType="java.lang.Double" collection="true" name="List 1"/>
+                <output bomType="java.lang.Double" collection="false" name="Minimum"/>
+                <rule defaultRule="false" href="node_1/Scan%20list%201.drl" kind="BusinessRule" name="Scan list 1"/>
+                <rule defaultRule="false" href="node_1/Scan%20list%202.drl" kind="BusinessRule" name="Scan list 2"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Minimum" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="List 1">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Double" collection="true" name="List 1"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="List 1" typeRef="java.lang.Double[]"/>
+    </inputData>
+    <decision id="node_3" name="Maximum">
+        <description>Choose the biggest value from a list.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="max">
+                <input bomType="java.lang.Double" collection="true" name="List 2"/>
+                <input bomType="java.lang.Double" collection="true" name="List 1"/>
+                <output bomType="java.lang.Double" collection="false" name="Maximum"/>
+                <rule defaultRule="false" href="node_3/Scan%20list%201.drl" kind="BusinessRule" name="Scan list 1"/>
+                <rule defaultRule="false" href="node_3/Scan%20list%202.drl" kind="BusinessRule" name="Scan list 2"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="Maximum" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

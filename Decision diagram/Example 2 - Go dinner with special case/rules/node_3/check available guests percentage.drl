@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>check available guests percentage</name>
+  <uuid>55536870-72b7-4f28-a5aa-23f1f10d0147</uuid>
+  <documentation><![CDATA[Computes the number of available guests, decides if it is enough.]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions 
+    set available to Guests where each boolean is true ;
+    set num to the number of elements in available * 100;
+    set 'attendance percentage' to num / the number of elements in Guests ;
+
+if 'attendance percentage' is less than 75 
+then
+    set decision to false ;
+else
+    set decision to true; 
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

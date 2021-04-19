@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Analyze information</name>
+  <uuid>7bb2fa82-fffc-4b84-aff6-129f3355a2f0</uuid>
+  <documentation><![CDATA[Analyze the information about a customer.]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[-- Call analysis model
+define aa as the level3 analyze datas computed from Customer information being Customer;
+
+-- add each statement to the output.
+for each string in aa : 
+    - add this string to decision ;
+    
+
+ 
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

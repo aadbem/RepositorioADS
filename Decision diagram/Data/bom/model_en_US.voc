@@ -1,0 +1,41 @@
+
+# Term: financial information
+@financial\ information#plural = financial information
+
+# Answer
+Answer#concept.documentation = 
+Answer#concept.label = final answer
+Answer.Answer(java.util.List,boolean)#phrase.navigation = a new {final answer} where {0, explanation} {1, go}
+Answer.addTo_explanation(java.lang.String)#phrase.action = add {0} to the explanations of {this}
+Answer.clear_explanation()#phrase.action = clear the explanations of {this}
+Answer.explanation#phrase.action = set the explanations of {this} to {explanation}
+Answer.explanation#phrase.navigation = {explanation} of {this}
+Answer.go#phrase.action[0] = {this} gets go only if {go}
+Answer.go#phrase.action[1] = make it {go} that {this} is go
+Answer.go#phrase.action[1].deprecated = true
+Answer.go#phrase.navigation = {this} is go
+Answer.go#phrase.negative_predicate = {this} is not go
+Answer.go#phrase.negative_predicate_setter = {this} does not get go
+Answer.go#phrase.positive_predicate_setter = {this} gets go
+Answer.removeFrom_explanation(java.lang.String)#phrase.action = remove {0} from the explanations of {this}
+
+# Finance
+Finance#concept.label = financial information
+Finance.Finance(double,double)#phrase.navigation = a new {financial information} where {0, balance} {1, debit}
+Finance.balance#phrase.action = set the balance of {this} to {balance}
+Finance.balance#phrase.addition_setter = add {balance} to the balance of {this}
+Finance.balance#phrase.navigation = {balance} of {this}
+Finance.balance#phrase.subtraction_setter = subtract {balance} from the balance of {this}
+Finance.debits#phrase.action = set the debit of {this} to {debit}
+Finance.debits#phrase.addition_setter = add {debit} to the debit of {this}
+Finance.debits#phrase.navigation = {debit} of {this}
+Finance.debits#phrase.subtraction_setter = subtract {debit} from the debit of {this}
+
+# Weather
+Weather#concept.label = weather forecast
+Weather.clouds#instance.label = Clouds
+Weather.fair#instance.label = Fair
+Weather.heavyRain#instance.label = Heavy rain
+Weather.rain#instance.label = Rain
+Weather.storm#instance.label = Storm
+Weather.sun#instance.label = Sun

@@ -1,0 +1,9 @@
+{
+  "name" : "ibm/albertobem/ML Start Provider1618872682217",
+  "type" : "WML",
+  "description" : "Modelo ML Loan Risk Score",
+  "mlUrl" : "https://us-south.ml.cloud.ibm.com/ml/v4",
+  "authUrl" : "https://iam.bluemix.net/identity/token",
+  "instanceId" : "d22ec142-7de7-45ec-b40c-1f9d7b56d320",
+  "apiKey" : null
+}

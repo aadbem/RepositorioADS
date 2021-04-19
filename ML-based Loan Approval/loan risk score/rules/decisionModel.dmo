@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>loanRiskScore</name>
+  <uuid>c7e54d5f-b367-47f1-9291-21c761a7b75b</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="Decisions" name="loanRiskScore" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="input" name="Loan">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="newtype" collection="false" name="Loan"/>
+            </initialization>
+        </extensionElements>
+        <variable id="input_ii" name="Loan" typeRef="newtype"/>
+    </inputData>
+    <decision id="input-mapping" name="Input mapping">
+        <description>The input mapping rule prepares the input of the ML model from the values of the loan and the borrower.
+</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="newtype" collection="false" name="Loan"/>
+                <input bomType="newtype1" collection="false" name="Borrower"/>
+                <output bomType="ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input" collection="false" name="Input mapping"/>
+                <rule defaultRule="false" href="input-mapping/input%20mapping%20rule.drl" kind="BusinessRule" name="input mapping rule"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="input_mapping_ii" name="Input mapping" typeRef="ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input"/>
+        <informationRequirement>
+            <requiredInput href="#input"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+    </decision>
+    <decision id="output" name="ML model invocation">
+        <description>ML model output</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input" collection="false" name="Input mapping"/>
+                <output bomType="ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output" collection="false" name="ML model invocation"/>
+                <rule defaultRule="false" href="decisionModel.drl" kind="BusinessRule" name="Prediction"/>
+            </ruleset>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.predictionInvocation"><![CDATA[true]]></property>
+            </properties>
+        </extensionElements>
+        <variable id="output_ii" name="ML model invocation" typeRef="ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output"/>
+        <informationRequirement>
+            <requiredInput href="#input-mapping"/>
+        </informationRequirement>
+    </decision>
+    <decision id="output-mapping" name="Output mapping">
+        <description>The output mapping rule builds a risk probability from the ML model invocation output. It gives a neutral output when this invocation is in error.
+</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output" collection="false" name="ML model invocation"/>
+                <output bomType="RiskProbabilities" collection="false" name="Output mapping"/>
+                <rule defaultRule="false" href="output-mapping/output%20mapping%20rule.drl" kind="BusinessRule" name="output mapping rule"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="output_mapping_ii" name="Output mapping" typeRef="RiskProbabilities"/>
+        <informationRequirement>
+            <requiredInput href="#output"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_1" name="Borrower">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="newtype1" collection="false" name="Borrower"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_1_ii" name="Borrower" typeRef="newtype1"/>
+    </inputData>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

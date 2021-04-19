@@ -1,0 +1,114 @@
+
+
+public class Contract
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Contract"
+        property "de.generated" "true"
+{
+    public java.util.List milestones domain 0,* class Milestone
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "milestones"
+                property update "true";
+    public string name
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "name"
+                property update "true";
+    public ilog.rules.brl.SimpleDate startDate
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "start date"
+                property update "true";
+    public double value
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "value"
+                property update "true";
+    public Contract(java.util.List milestones domain 0,* class Milestone, 
+        string name, 
+        ilog.rules.brl.SimpleDate startDate, 
+        double value)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Contract()
+                property "dataio.default" "true";
+    public void addTo_milestones(Milestone milestones)
+                property collectionAttribute "milestones"
+                property update "true";
+    public void clear_milestones()
+                property collectionAttribute "milestones"
+                property update "true";
+    public void removeFrom_milestones(Milestone milestones)
+                property collectionAttribute "milestones"
+                property update "true";
+    public void set_milestones(java.util.Collection milestones domain 0,* class Milestone)
+                property collectionAttribute "milestones"
+                property update "true";
+}
+
+public class Customer
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Customer"
+        property "de.generated" "true"
+{
+    public string company
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "company"
+                property update "true";
+    public java.util.List contracts domain 0,* class Contract
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "contracts"
+                property update "true";
+    public string firstName
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "first name"
+                property update "true";
+    public string lastName
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "last name"
+                property update "true";
+    public Customer(string company, 
+        java.util.List contracts domain 0,* class Contract, 
+        string firstName, 
+        string lastName)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Customer()
+                property "dataio.default" "true";
+    public void addTo_contracts(Contract contracts)
+                property collectionAttribute "contracts"
+                property update "true";
+    public void clear_contracts()
+                property collectionAttribute "contracts"
+                property update "true";
+    public void removeFrom_contracts(Contract contracts)
+                property collectionAttribute "contracts"
+                property update "true";
+    public void set_contracts(java.util.Collection contracts domain 0,* class Contract)
+                property collectionAttribute "contracts"
+                property update "true";
+}
+
+public class Milestone
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Milestone"
+        property "de.generated" "true"
+{
+    public boolean completed
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "completed"
+                property update "true";
+    public string name
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "name"
+                property update "true";
+    public Milestone(boolean completed, string name)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Milestone()
+                property "dataio.default" "true";
+}
+

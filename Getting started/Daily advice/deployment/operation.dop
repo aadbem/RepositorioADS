@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Daily advice">
+  <name>dailyAdvice</name>
+  <uuid>955b87e0-9579-4580-af64-25b886414787</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#b2c15a52-0249-4d5c-9275-72e4dab09a06"/>
+  <targetRuleProject href="../../Daily%20advice#d267b496-4adc-4580-9cfd-e012c1b1c965"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

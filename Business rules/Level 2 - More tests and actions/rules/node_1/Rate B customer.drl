@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Rate B customer</name>
+  <uuid>a5adfde3-3914-4241-9bd8-8fa89163d98d</uuid>
+  <documentation><![CDATA[This rule defines a rate B customer.]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'Credit score' is between 500 and 650 
+    and 'Yearly income' is at least 100000
+then
+    set decision to 'Customer name' + " is rated B." ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

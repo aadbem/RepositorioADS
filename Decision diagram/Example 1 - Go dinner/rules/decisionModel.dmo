@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>3e6ac92f-c70e-4ac9-be04-110eee29778a</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Example 1 - Go dinner" namespace="">
+    <extensionElements>
+        <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">How do you decide whether you can go out to dinner tomorrow?
+The right answer is: Well, it depends!
+It depends on how many invitees can join. It depends on the weather and several other factors.
+This project provides the final 'go-no-go' decision as well as an explanation of the decision.</description>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <decision id="node_1" name="Go dinner decision">
+        <description>Should we go dinner? If not, why?</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Boolean" collection="false" name="Acceptable weather"/>
+                <input bomType="java.lang.Boolean" collection="false" name="Enough available guests"/>
+                <input bomType="java.lang.Boolean" collection="false" name="Enough budget"/>
+                <output bomType="Answer" collection="false" name="Go dinner decision"/>
+                <rule defaultRule="false" href="node_1/weather.drl" kind="BusinessRule" name="weather"/>
+                <rule defaultRule="false" href="node_1/budget.drl" kind="BusinessRule" name="budget"/>
+                <rule defaultRule="false" href="node_1/enough%20guests.drl" kind="BusinessRule" name="enough guests"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Go dinner decision" typeRef="Answer"/>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_2" name="Acceptable weather">
+        <description>Decides if the weather is acceptable. This decision defines what we consider as an acceptable weather.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Weather" collection="false" name="Weather forecast"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Acceptable weather"/>
+                <rule defaultRule="false" href="node_2/weather%20table.dmt" kind="DecisionTable" name="weather table"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_2_ii" name="Acceptable weather" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_7"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_3" name="Enough available guests">
+        <description>Decides if enough guests can join. This decision defines what we consider as "enough attendance".</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Boolean" collection="true" name="Guests"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Enough available guests"/>
+                <rule defaultRule="false" href="node_3/check%20available%20guests%20percentage.drl" kind="BusinessRule" name="check available guests percentage"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="Enough available guests" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_9"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_4" name="Enough budget">
+        <description>Decides if there is enough money. This decision defines what we consider as "enough money".</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Finance" collection="false" name="Financial information"/>
+                <output bomType="java.lang.Boolean" collection="false" name="Enough budget"/>
+                <rule defaultRule="false" href="node_4/enough%20money.drl" kind="BusinessRule" name="enough money"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_4_ii" name="Enough budget" typeRef="java.lang.Boolean"/>
+        <informationRequirement>
+            <requiredInput href="#node_5"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_5" name="Financial information">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Finance" collection="false" name="Financial information"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_5_ii" name="Financial information" typeRef="Finance"/>
+    </inputData>
+    <inputData id="node_7" name="Weather forecast">
+        <description>Weather forecast for tomorrow.</description>
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Weather" collection="false" name="Weather forecast"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_7_ii" name="Weather forecast" typeRef="Weather"/>
+    </inputData>
+    <inputData id="node_9" name="Guests">
+        <description>Indicate whether each participant can join or not.
+It uses a list of booleans, each one indicating whether a guest can join or not.</description>
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Boolean" collection="true" name="Guests"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_9_ii" name="Guests" typeRef="java.lang.Boolean[]"/>
+    </inputData>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

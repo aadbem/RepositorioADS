@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Check lack of milestones</name>
+  <uuid>cf654788-b211-43cc-93df-eaa1e2d09791</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'contract' to a Contract in the contracts ;  
+
+if there is no Milestone in the milestones of contract   
+ then 
+    add "Error: No milestones in contract: " + the name of contract to decision;
+    
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

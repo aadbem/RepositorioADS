@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>check contract value</name>
+  <uuid>2e4e000e-1a91-4ad1-baa4-8e85b685c6d2</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set contract to a Contract in the contracts ;
+    
+if  the value of contract is at most 0
+ then 
+    add "Error: The value of " + the name of contract + " is incorrect." to decision;
+
+
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Level 4 - Complex types and multiple actions">
+  <name>level4-ComplexTypesAndMultipleActions</name>
+  <uuid>a82d2e4a-072f-4ccd-9b6c-e7bbdd5806a7</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#ce4da20e-82d5-4714-a29f-8437fb03781f"/>
+  <targetRuleProject href="../../Level%204%20-%20Complex%20types%20and%20multiple%20actions#658f83fe-8b60-49ee-8999-c97607f9f862"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

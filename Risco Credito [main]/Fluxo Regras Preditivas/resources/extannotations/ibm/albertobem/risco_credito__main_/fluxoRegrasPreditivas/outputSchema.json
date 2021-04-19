@@ -1,0 +1,9 @@
+{
+  "id" : "schemaOut",
+  "fields" : [ {
+    "name" : "output",
+    "type" : "string",
+    "nullable" : true,
+    "jsonName" : "output"
+  } ]
+}

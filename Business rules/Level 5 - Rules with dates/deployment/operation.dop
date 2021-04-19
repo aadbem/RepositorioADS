@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Level 5 - Rules with dates">
+  <name>level5-RulesWithDates</name>
+  <uuid>a8c0ffd2-fc8f-4221-a7d4-322a92b70e4e</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#e1132518-dcaa-4113-a495-c17e61ea8d9d"/>
+  <targetRuleProject href="../../Level%205%20-%20Rules%20with%20dates#a095e9ea-55c5-43f7-b067-504cd9a16f24"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

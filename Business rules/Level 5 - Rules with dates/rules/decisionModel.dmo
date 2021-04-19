@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>e1132518-dcaa-4113-a495-c17e61ea8d9d</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Level 5 - Rules with dates and times" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Person">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Person" collection="false" name="Person"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Person" typeRef="Person"/>
+    </inputData>
+    <decision id="node_1" name="Completed person">
+        <description>This decision node completes the person's input data with its computed age.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Person" collection="false" name="Person"/>
+                <input bomType="ilog.rules.brl.SimpleDate" collection="false" name="Date"/>
+                <output bomType="Person" collection="false" name="Completed person"/>
+                <rule defaultRule="false" href="node_1/Compute%20age.drl" kind="BusinessRule" name="Compute age"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Completed person" typeRef="Person"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="Date">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="ilog.rules.brl.SimpleDate" collection="false" name="Date"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Date" typeRef="ilog.rules.brl.SimpleDate"/>
+    </inputData>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>ce4da20e-82d5-4714-a29f-8437fb03781f</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Level 4 - Complex types and multiple actions" namespace="">
+    <extensionElements>
+        <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">It's possible to deal with complex types in decision tables. Also, the 'action' part can do several things.</description>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Customer">
+        <description>Customer information.</description>
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Customer" collection="false" name="Customer"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Customer" typeRef="Customer"/>
+    </inputData>
+    <decision id="node_1" name="Discount and reward">
+        <description>This decision outputs a complex type containing a discount rate and a number of loyalty points based on the status of the customer and the amount of an order.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Customer" collection="false" name="Customer"/>
+                <input bomType="java.lang.Double" collection="false" name="Order amount"/>
+                <output bomType="Result" collection="false" name="Discount and reward"/>
+                <rule defaultRule="false" href="node_1/Decision%20table.dmt" kind="DecisionTable" name="Decision table"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Discount and reward" typeRef="Result"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="Order amount">
+        <description>Order amount, used to determine a discount and a number of loyalty points.</description>
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Double" collection="false" name="Order amount"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Order amount" typeRef="java.lang.Double"/>
+    </inputData>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

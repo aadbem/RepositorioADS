@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>e15c941d-5296-45ad-9112-f3f0b3ddfb74</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Level 4 - Rules with definitions" namespace="">
+    <extensionElements>
+        <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">Before the if statement, it's possible to set the context through a 'definitions' section. It's also possible to output lists of things from a decision.</description>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Group of people">
+        <description>This is a list of persons. See the definition of the person composite type in the data model.</description>
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Person" collection="true" name="Group of people"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Group of people" typeRef="Person[]"/>
+    </inputData>
+    <decision id="node_1" name="Assessment">
+        <description>This decision node builds an assessment's list about the age of a person's group.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Person" collection="true" name="Group of people"/>
+                <output bomType="java.lang.String" collection="true" name="Assessment"/>
+                <rule defaultRule="false" href="node_1/Average%20age.drl" kind="BusinessRule" name="Average age"/>
+                <rule defaultRule="false" href="node_1/Is%20there%20a%20minor.drl" kind="BusinessRule" name="Is there a minor"/>
+                <rule defaultRule="false" href="node_1/List%20minor%20people.drl" kind="BusinessRule" name="List minor people"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Assessment" typeRef="java.lang.String[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Compute age</name>
+  <uuid>0d86401b-ee55-47b9-917a-ebf2661fc852</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+set age to the number of years between the birth date and Date ;
+set days to the number of days between the birth date and Date ;
+set weeks to the number of weeks between the birth date and Date ;
+
+then
+--copy the input to the output
+set decision to Person ;
+-- set the age
+set the age of decision to age ;
+
+print the name + " is " + age + " years old, which corresponds to " + weeks + " weeks, or " + days + " days";
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

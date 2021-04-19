@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>424bee45-6a13-4ae9-900c-8ddcdc1b4234</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Task1 Making a decision" namespace="">
+    <extensionElements>
+        <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">In this task, you assemble the basic elements for making a decision that produces a simple "Hello world". Then, you validate the decision to check its results. These elements form the foundation of your decision project.</description>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Name">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="Name"/>
+            </initialization>
+        </extensionElements>
+        <variable id="name_ii" name="Name" typeRef="java.lang.String"/>
+    </inputData>
+    <decision id="node_1" name="Daily advice">
+        <description>Daily advice built from the provided input.
+
+</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.String" collection="false" name="Name"/>
+                <output bomType="java.lang.String" collection="false" name="Daily advice"/>
+                <rule defaultRule="false" href="node_1/Advice%20rule.drl" kind="BusinessRule" name="Advice rule"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="dailyAdvice_ii" name="Daily advice" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

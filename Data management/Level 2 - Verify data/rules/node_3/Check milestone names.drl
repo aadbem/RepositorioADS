@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Check milestone names</name>
+  <uuid>63e588b0-851b-4292-8b55-b7152db195d5</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+    set 'contract' to a Contract in the contracts ;  
+    set milestone to a Milestone in the milestones of contract ; 
+
+if the name of milestone is empty  
+ then 
+    add "Error: A milestone name is missing in contract: " + the name of contract to decision;
+    
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

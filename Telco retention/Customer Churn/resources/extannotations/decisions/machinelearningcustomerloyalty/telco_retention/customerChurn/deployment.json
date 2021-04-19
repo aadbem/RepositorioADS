@@ -1,0 +1,28 @@
+{
+  "metadata" : {
+    "id" : "d34364a4-e149-4e34-99af-e25212cea328",
+    "name" : "Customer churn deployment",
+    "modified_at" : "2020-12-09T11:54:55.990Z",
+    "created_at" : "2020-12-09T11:54:55.990Z",
+    "owner" : "IBMid-550002E5KH",
+    "space_id" : "87f742c7-f7be-438c-919b-a32bd3374a48"
+  },
+  "entity" : {
+    "name" : "Customer churn deployment",
+    "space_id" : "87f742c7-f7be-438c-919b-a32bd3374a48",
+    "custom" : { },
+    "online" : { },
+    "status" : {
+      "state" : "ready",
+      "online_url" : {
+        "url" : "https://us-south.ml.cloud.ibm.com/ml/v4/deployments/d34364a4-e149-4e34-99af-e25212cea328/predictions"
+      }
+    },
+    "asset" : {
+      "id" : "41ad8856-dc96-4837-8f83-2fc541768212"
+    }
+  },
+  "name" : "Customer churn deployment",
+  "status" : "ready",
+  "deployedAt" : "2020-12-09T11:54:55.990Z"
+}

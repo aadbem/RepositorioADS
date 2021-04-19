@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>a4032e77-c49b-44e2-ac84-56e179fcc90d</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Level 3 - Multiples decisions" namespace="">
+    <extensionElements>
+        <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">It's possible to have several sub-decisions, work with lists, make computations and test results against some criteria. This decision model takes a list of numbers, computes the sum and test it against the given threshold.</description>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Numbers">
+        <description>This is a list of numbers.</description>
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Double" collection="true" name="Numbers"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Numbers" typeRef="java.lang.Double[]"/>
+    </inputData>
+    <decision id="node_1" name="Total">
+        <description>This decision node computes the sum of input numbers.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="true" name="Numbers"/>
+                <output bomType="java.lang.Double" collection="false" name="Total"/>
+                <rule defaultRule="false" href="node_1/Sum%20inputs.drl" kind="BusinessRule" name="Sum inputs"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Total" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="Threshold">
+        <description>This is a threshold.</description>
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Double" collection="false" name="Threshold"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Threshold" typeRef="java.lang.Double"/>
+    </inputData>
+    <decision id="node_3" name="Test against threshold">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Double" collection="false" name="Total"/>
+                <input bomType="java.lang.Double" collection="false" name="Threshold"/>
+                <output bomType="java.lang.String" collection="false" name="Test against threshold"/>
+                <rule defaultRule="false" href="node_3/Test%20against%20threshold.drl" kind="BusinessRule" name="Test against threshold"/>
+                <rule defaultRule="false" href="node_3/Equals%20to%20threshold.drl" kind="BusinessRule" name="Equals to threshold"/>
+                <rule defaultRule="false" href="node_3/Print%20sum.drl" kind="BusinessRule" name="Print sum"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="Test against threshold" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_1"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+    </decision>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

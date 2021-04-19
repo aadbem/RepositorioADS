@@ -1,0 +1,7 @@
+{
+  "messages": [
+    "Your request has been rejected",
+    "Your request has been approved",
+    "Your request has not been approved"
+  ]
+}

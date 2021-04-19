@@ -15,7 +15,9 @@
         <maven-dependency-plugin.version>3.1.2</maven-dependency-plugin.version>
     </properties>
     <modules>
+        <module>Fluxo Regras Preditivas</module>
         <module>Teste</module>
+        <module>Teste_Preditivas</module>
         <module>.decisionservice</module>
     </modules>
 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>amount</name>
+  <uuid>a2b8dff8-7128-4983-bd79-8b0a77f90e62</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'Loan amount' is more than 100000
+then
+    set decision to false ;
+    print "Amount is too high";]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

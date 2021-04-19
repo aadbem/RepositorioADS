@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>enough money</name>
+  <uuid>180127da-0c25-4226-8a83-e2fe3ae09da0</uuid>
+  <documentation><![CDATA[Computes how much money is available and decides if it is enough.
+]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the balance - the debit  is at least 500
+then
+    set decision to true ;
+else
+    set decision to false;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

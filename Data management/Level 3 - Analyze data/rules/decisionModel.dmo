@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>2693b16f-e1d1-458f-9cca-8eda24d799fb</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Level 3 - Analyze data" namespace="">
+    <extensionElements>
+        <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">Analyze complex data elements</description>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Customer information">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Customer" collection="false" name="Customer information"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Customer information" typeRef="Customer"/>
+    </inputData>
+    <decision id="node_1" name="Analyze data">
+        <description>Analyze data and document customer's information.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Customer" collection="false" name="Customer information"/>
+                <input bomType="java.lang.Long" collection="false" name="Non completed milestones"/>
+                <input bomType="java.lang.Long" collection="false" name="Completed milestones"/>
+                <output bomType="java.lang.String" collection="true" name="Analyze data"/>
+                <rule defaultRule="false" href="node_1/Document%20customer%20info.drl" kind="BusinessRule" name="Document customer info"/>
+                <rule defaultRule="false" href="node_1/Analyze%20completed%20milestones.drl" kind="BusinessRule" name="Analyze completed milestones"/>
+                <rule defaultRule="false" href="node_1/Completion%20rate.drl" kind="BusinessRule" name="Completion rate"/>
+                <rule defaultRule="false" href="node_1/Status.drl" kind="BusinessRule" name="Status"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Analyze data" typeRef="java.lang.String[]"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_2" name="Non completed milestones">
+        <description>Count the number of pending milestones.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Customer" collection="false" name="Customer information"/>
+                <output bomType="java.lang.Long" collection="false" name="Non completed milestones"/>
+                <rule defaultRule="false" href="node_2/count%20the%20number%20of%20pending%20milestones.drl" kind="BusinessRule" name="count the number of pending milestones"/>
+                <rule defaultRule="true" href="node_2/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_2_ii" name="Non completed milestones" typeRef="java.lang.Long"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+    <decision id="node_3" name="Completed milestones">
+        <description>Count the number of completed milestones.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Customer" collection="false" name="Customer information"/>
+                <output bomType="java.lang.Long" collection="false" name="Completed milestones"/>
+                <rule defaultRule="false" href="node_3/count%20completed%20milestones.drl" kind="BusinessRule" name="count completed milestones"/>
+                <rule defaultRule="true" href="node_3/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="Completed milestones" typeRef="java.lang.Long"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

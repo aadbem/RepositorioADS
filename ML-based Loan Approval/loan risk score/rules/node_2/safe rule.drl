@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>safe rule</name>
+  <uuid>94b0c54f-049a-4e6d-adc5-0cc7749d04b2</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 'Output mapping' is undefined 
+then
+print "Connect the predictive model and remove this node";
+set decision to a new risk probabilities where 
+    the risk is 0.5 , 
+    the no risk is 0.5 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

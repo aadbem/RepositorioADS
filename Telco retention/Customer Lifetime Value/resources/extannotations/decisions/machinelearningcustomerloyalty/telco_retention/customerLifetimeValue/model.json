@@ -1,0 +1,61 @@
+{
+  "metadata" : {
+    "id" : "9fbf1fcd-3969-4933-91e4-6536da1b18e3",
+    "name" : "Customer LTV",
+    "modified_at" : "2020-12-09T15:47:20.502Z",
+    "created_at" : "2020-12-09T15:47:20.215Z",
+    "owner" : "IBMid-550002E5KH",
+    "space_id" : "87f742c7-f7be-438c-919b-a32bd3374a48"
+  },
+  "entity" : {
+    "content_import_state" : "completed",
+    "type" : "wml-hybrid_0.1",
+    "schemas" : {
+      "input" : [ {
+        "id" : "auto_ai_kb_input_schema",
+        "fields" : [ {
+          "name" : "Gender",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "Status",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "Children",
+          "type" : "integer",
+          "nullable" : true
+        }, {
+          "name" : "Est Income",
+          "type" : "double",
+          "nullable" : true
+        }, {
+          "name" : "Car Owner",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "Age",
+          "type" : "double",
+          "nullable" : true
+        }, {
+          "name" : "Paymethod",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "Usage",
+          "type" : "double",
+          "nullable" : true
+        }, {
+          "name" : "RatePlan",
+          "type" : "integer",
+          "nullable" : true
+        } ]
+      } ],
+      "output" : [ ]
+    }
+  },
+  "id" : "9fbf1fcd-3969-4933-91e4-6536da1b18e3",
+  "name" : "Customer LTV",
+  "trainedAt" : "2020-12-09T15:47:20.215Z",
+  "modifiedAt" : "2020-12-09T15:47:20.502Z"
+}

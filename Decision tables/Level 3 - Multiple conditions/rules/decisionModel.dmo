@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>113c8a82-b66a-47f4-8d7f-437032005222</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Level 3 - Multiple conditions" namespace="">
+    <extensionElements>
+        <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">More complex decision table with multiple conditions, groups and ranges.</description>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Grade">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="Grade"/>
+            </initialization>
+        </extensionElements>
+        <variable id="grade_ii" name="Grade" typeRef="java.lang.String"/>
+    </inputData>
+    <decision id="node_1" name="Validate loan">
+        <description>Check if a loan can be validated.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.String" collection="false" name="Grade"/>
+                <input bomType="java.lang.Double" collection="false" name="Loan amount"/>
+                <input bomType="java.lang.Boolean" collection="false" name="Already customer"/>
+                <output bomType="java.lang.String" collection="false" name="Validate loan"/>
+                <rule defaultRule="false" href="node_1/prepare%20decision.dmt" kind="DecisionTable" name="prepare decision"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="validateLoan_ii" name="Validate loan" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="Loan amount">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Double" collection="false" name="Loan amount"/>
+            </initialization>
+        </extensionElements>
+        <variable id="loanAmount_ii" name="Loan amount" typeRef="java.lang.Double"/>
+    </inputData>
+    <inputData id="node_3" name="Already customer">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Boolean" collection="false" name="Already customer"/>
+            </initialization>
+        </extensionElements>
+        <variable id="alreadyCustomer_ii" name="Already customer" typeRef="java.lang.Boolean"/>
+    </inputData>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

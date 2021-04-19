@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Teste_Preditivas">
+  <name>teste_Preditivas</name>
+  <uuid>1f3a652d-202f-4c5c-91be-16c9cdc8cb34</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#9a490942-eea5-4165-8b53-c4ed0d62eb91"/>
+  <targetRuleProject href="../../Teste_Preditivas#a9aaef90-3424-4db3-a4e8-0095e8d44b15"/>
+  <tags key="ProviderType">
+    <value><![CDATA[OPS]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

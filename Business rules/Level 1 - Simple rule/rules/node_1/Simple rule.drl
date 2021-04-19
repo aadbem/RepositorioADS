@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Simple rule</name>
+  <uuid>2c2e251a-08c8-42ba-a7e9-31650bce98cb</uuid>
+  <documentation><![CDATA[If a name is provided, this rule builds a string like "Hello John!". If no name is provided, an impersonal "Hi there!" is returned.]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[if Name is defined
+then
+    set decision to "Hello " + Name +"!" ;
+else
+    set decision to "Hi there!";
+
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>df9c20ac-68b4-4930-9223-7b6deee022ed</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Level 4 - Sum policy" namespace="">
+    <extensionElements>
+        <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">All applicable rules execute and the order of execution does not matter. If you use the sum policy, the values of all applicable rules are summed up.</description>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Fare code">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="Fare code"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Fare code" typeRef="java.lang.String"/>
+    </inputData>
+    <decision id="node_1" name="Total of loyalty points">
+        <description>Calculate the total of loyalty points.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sum">
+                <input bomType="java.lang.String" collection="false" name="Fare code"/>
+                <input bomType="java.lang.String" collection="false" name="Customer status"/>
+                <input bomType="java.lang.String" collection="false" name="Class"/>
+                <output bomType="java.lang.Double" collection="false" name="Total of loyalty points"/>
+                <rule defaultRule="false" href="node_1/Status%20table.dmt" kind="DecisionTable" name="Status table"/>
+                <rule defaultRule="false" href="node_1/Class%20table.dmt" kind="DecisionTable" name="Class table"/>
+                <rule defaultRule="false" href="node_1/Fare%20code%20table.dmt" kind="DecisionTable" name="Fare code table"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Total of loyalty points" typeRef="java.lang.Double"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="Customer status">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="Customer status"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Customer status" typeRef="java.lang.String"/>
+    </inputData>
+    <inputData id="node_3" name="Class">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="Class"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_3_ii" name="Class" typeRef="java.lang.String"/>
+    </inputData>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

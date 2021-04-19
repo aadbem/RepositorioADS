@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>5fa7047c-3235-4c50-9ba9-ab5fa1a8829d</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Level 2 - More tests and actions" namespace="">
+    <extensionElements>
+        <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">Rules can do more complex tests and the action can also be more sophisticated. There can be several rules for each decision.</description>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Customer name">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.String" collection="false" name="Customer name"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Customer name" typeRef="java.lang.String"/>
+    </inputData>
+    <decision id="node_1" name="Grade">
+        <description>This decision rates a customer based on several criteria provided as inputs.
+It contains several rules and a default value.</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="first">
+                <input bomType="java.lang.String" collection="false" name="Customer name"/>
+                <input bomType="java.lang.Long" collection="false" name="Credit score"/>
+                <input bomType="java.lang.Long" collection="false" name="Yearly income"/>
+                <output bomType="java.lang.String" collection="false" name="Grade"/>
+                <rule defaultRule="false" href="node_1/Rate%20A%20customer.drl" kind="BusinessRule" name="Rate A customer"/>
+                <rule defaultRule="false" href="node_1/Rate%20B%20customer.drl" kind="BusinessRule" name="Rate B customer"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Grade" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_2"/>
+        </informationRequirement>
+        <informationRequirement>
+            <requiredInput href="#node_3"/>
+        </informationRequirement>
+    </decision>
+    <inputData id="node_2" name="Credit score">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Long" collection="false" name="Credit score"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_2_ii" name="Credit score" typeRef="java.lang.Long"/>
+    </inputData>
+    <inputData id="node_3" name="Yearly income">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Long" collection="false" name="Yearly income"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_3_ii" name="Yearly income" typeRef="java.lang.Long"/>
+    </inputData>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

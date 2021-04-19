@@ -1,0 +1,22 @@
+{
+  "loan": {
+    "number of monthly payments": 72,
+    "start date": "2020-06-01",
+    "amount": 185000,
+    "rate": 0.7
+  },
+  "borrower": {
+    "first name": "John",
+    "last name": "Doe",
+    "birth date": "1968-05-12",
+    "SSN": {
+      "area number": "123",
+      "group code": "45",
+      "serial number": "6789"
+    },
+    "yearly income": 1000000,
+    "zip code": "91320",
+    "credit score": 750
+  },
+  "currentTime": "2020-02-03"
+}

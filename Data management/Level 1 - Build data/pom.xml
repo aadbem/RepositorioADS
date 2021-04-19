@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>ibm.albertobem.data_management</groupId>
+        <artifactId>dataManagement</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>decisions.education.data_management</groupId>
+    <artifactId>level1-BuildData</artifactId>
+    <version>LATEST-SNAPSHOT</version>
+    <packaging>decision-library</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.ibm.decision</groupId>
+                <artifactId>build-maven-plugin</artifactId>
+                
+                <configuration>
+                    <deployments>
+                        <deployment>
+                            <name>level1-BuildData</name>
+                        </deployment>
+                    </deployments>
+                <packageName>decisions.education.data_management.level1_builddata</packageName>
+                </configuration>
+            
+            </plugin>
+        </plugins>
+    </build>
+
+<dependencies>
+        <dependency>
+            <groupId>decisions.education.data_management</groupId>
+            <artifactId>data</artifactId>
+            <type>decision-library</type>
+            <version>LATEST-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+</project>

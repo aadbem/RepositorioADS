@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Deployment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" ruleAppName="decisions.education.decision_tables:level1-SimpleTable" ruleAppVersion="LATEST-SNAPSHOT" packageName="decisions.education.decision_tables._1simpletable" managingXom="true">
+  <name>level1-SimpleTable</name>
+  <uuid>2171d656-8112-4cd2-9ffd-9fa35659274c</uuid>
+  <locales>en_US</locales>
+  <operations operationName="operation">
+    <operation href="operation.dop#4134ecab-6817-465e-8425-c3551192bd05"/>
+    <properties key="ruleset.version">
+      <value><![CDATA[1.0]]></value>
+    </properties>
+  </operations>
+  <versionPolicies label="Increment minor version numbers" ruleset="INCREMENT_MINOR" default="true" recurrent="true">
+    <description><![CDATA[Updates the minor version for each ruleset. Makes the new version available but retains previous versions.]]></description>
+  </versionPolicies>
+  <versionPolicies label="Use the base version numbers" recurrent="true">
+    <description><![CDATA[Uses the numbers provided in the deployment configuration. Replaces the latest version of each ruleset with this release. Used for hot fixes or development.]]></description>
+  </versionPolicies>
+  <versionPolicies label="The user can define the version numbers" ruleset="MANUAL" recurrent="true">
+    <description><![CDATA[Allows you to enter your own version numbers. Used for hot fixes or updates to an earlier release.]]></description>
+  </versionPolicies>
+</com.ibm.rules.studio.model.decisionservice:Deployment>

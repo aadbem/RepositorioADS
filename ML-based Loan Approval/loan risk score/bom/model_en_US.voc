@@ -1,0 +1,57 @@
+
+# ibm.albertobem.ml_based_loan_approval.loanRiskScore.Error
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Error#concept.label = Output error
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Error.Error(java.lang.String,java.lang.String)#phrase.navigation = a new {Output error} where {0, code} {1, message} 
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Error.code#phrase.action = set the code of {this} to {code}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Error.code#phrase.navigation = {code} of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Error.message#phrase.action = set the message of {this} to {message}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Error.message#phrase.navigation = {message} of {this}
+
+# ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input#concept.label = ML model input
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.Input(java.lang.Double,java.lang.Double,java.lang.Double,java.lang.Double,java.lang.Double,java.lang.Double)#phrase.navigation = a new {ML model input} where {0, creditscore} {1, income} {2, loanamount} {3, monthduration} {4, rate} {5, yearlyreimbursement} 
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.creditscore#phrase.action = set the creditscore of {this} to {creditscore}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.creditscore#phrase.addition_setter = add {creditscore} to the creditscore of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.creditscore#phrase.navigation = {creditscore} of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.creditscore#phrase.subtraction_setter = subtract {creditscore} from the creditscore of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.income#phrase.action = set the income of {this} to {income}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.income#phrase.addition_setter = add {income} to the income of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.income#phrase.navigation = {income} of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.income#phrase.subtraction_setter = subtract {income} from the income of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.loanamount#phrase.action = set the loanamount of {this} to {loanamount}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.loanamount#phrase.addition_setter = add {loanamount} to the loanamount of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.loanamount#phrase.navigation = {loanamount} of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.loanamount#phrase.subtraction_setter = subtract {loanamount} from the loanamount of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.monthduration#phrase.action = set the monthduration of {this} to {monthduration}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.monthduration#phrase.addition_setter = add {monthduration} to the monthduration of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.monthduration#phrase.navigation = {monthduration} of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.monthduration#phrase.subtraction_setter = subtract {monthduration} from the monthduration of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.rate#phrase.action = set the rate of {this} to {rate}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.rate#phrase.addition_setter = add {rate} to the rate of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.rate#phrase.navigation = {rate} of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.rate#phrase.subtraction_setter = subtract {rate} from the rate of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.yearlyreimbursement#phrase.action = set the yearlyreimbursement of {this} to {yearlyreimbursement}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.yearlyreimbursement#phrase.addition_setter = add {yearlyreimbursement} to the yearlyreimbursement of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.yearlyreimbursement#phrase.navigation = {yearlyreimbursement} of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.yearlyreimbursement#phrase.subtraction_setter = subtract {yearlyreimbursement} from the yearlyreimbursement of {this}
+
+# ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output#concept.label = ML model output
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output.Output(java.lang.Long,java.lang.Double,java.lang.Double)#phrase.navigation = a new {ML model output} where {0, predicted paymentdefault} {1, probability0} {2, probability1} 
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output.error#phrase.action = set the error of {this} to {error}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output.error#phrase.clearer = clear the error of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output.error#phrase.navigation = {error} of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output.inError()#phrase.navigation = {this} is in error
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output.predictedPaymentdefault#phrase.action = set the predicted paymentdefault of {this} to {predicted paymentdefault}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output.predictedPaymentdefault#phrase.addition_setter = add {predicted paymentdefault} to the predicted paymentdefault of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output.predictedPaymentdefault#phrase.navigation = {predicted paymentdefault} of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output.predictedPaymentdefault#phrase.subtraction_setter = subtract {predicted paymentdefault} from the predicted paymentdefault of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output.probability0#phrase.action = set the probability0 of {this} to {probability0}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output.probability0#phrase.addition_setter = add {probability0} to the probability0 of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output.probability0#phrase.navigation = {probability0} of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output.probability0#phrase.subtraction_setter = subtract {probability0} from the probability0 of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output.probability1#phrase.action = set the probability1 of {this} to {probability1}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output.probability1#phrase.addition_setter = add {probability1} to the probability1 of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output.probability1#phrase.navigation = {probability1} of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output.probability1#phrase.subtraction_setter = subtract {probability1} from the probability1 of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Output.run(ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input)#phrase.navigation = predict({0})

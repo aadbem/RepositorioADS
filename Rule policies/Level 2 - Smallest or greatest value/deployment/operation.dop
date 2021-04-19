@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Level 2 - Smallest or greatest value">
+  <name>level2-SmallestOrGreatestValue</name>
+  <uuid>c5b5fff6-36a1-4243-96b4-704dd2ad4d94</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#f2865031-84fc-476e-bb0b-cd3d6e3510fb"/>
+  <targetRuleProject href="../../Level%202%20-%20Smallest%20or%20greatest%20value#0cd94968-e14f-4402-803d-297b1b971e85"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

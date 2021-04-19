@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Level 4 - Sum policy">
+  <name>level4-SumPolicy</name>
+  <uuid>6828a0d9-089f-4e5e-8da5-17775910a79f</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#df9c20ac-68b4-4930-9223-7b6deee022ed"/>
+  <targetRuleProject href="../../Level%204%20-%20Sum%20policy#5ff13092-7f1e-406f-a846-c2ee8ae6b34b"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

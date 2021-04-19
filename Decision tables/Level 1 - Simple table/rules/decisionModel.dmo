@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>cf62d7cf-e794-4a91-ae14-fe6b59319c21</uuid>
+  <locale>en_US</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="Level 1 - Simple table" namespace="">
+    <extensionElements>
+        <description xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">A very simple table</description>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="en_US"/>
+    </extensionElements>
+    <inputData id="node_0" name="Achievement">
+        <description>A number between 0 and 100.</description>
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Long" collection="false" name="Achievement"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Achievement" typeRef="java.lang.Long"/>
+    </inputData>
+    <decision id="node_1" name="Grade">
+        <description>Output a grade (a letter) based on ranges of values. </description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Long" collection="false" name="Achievement"/>
+                <output bomType="java.lang.String" collection="false" name="Grade"/>
+                <rule defaultRule="false" href="node_1/Grade%20table.dmt" kind="DecisionTable" name="Grade table"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Grade" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

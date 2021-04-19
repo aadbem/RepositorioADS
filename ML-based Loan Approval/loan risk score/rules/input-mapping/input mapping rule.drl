@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>input mapping rule</name>
+  <uuid>a3b6b59d-f348-4009-b0d5-6bc0f48496d6</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[definitions
+set 'duration' to the number of monthly payments of Loan ;
+set 'rate' to the rate of Loan ;
+set 'yearlyreimbursement' to  'rate'  * the amount of Loan  / (1 - pow ( 1 + 'rate' , -duration));
+then
+    set decision to a new ML model input where
+        the creditscore is the credit score of Borrower , 
+        the income is the yearly income of Borrower , 
+        the loanamount is the amount of Loan , 
+        the monthduration is the number of monthly payments of Loan , 
+        the rate is 'rate' , 
+        the yearlyreimbursement is 'yearlyreimbursement' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Document customer info</name>
+  <uuid>03e99f6b-f0e3-41f1-b065-7541b38bc080</uuid>
+  <documentation><![CDATA[Document the customer's information.]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    the company of 'Customer information' is not empty
+then
+    add the first name of 'Customer information' + " "+ the last name of 'Customer information' + " at " + the company  to decision ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Level 2 - Verify data">
+  <name>level2-VerifyData</name>
+  <uuid>2ea391d0-54c6-4bf3-bed6-1e722b94d2ea</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#aeec9e55-5b17-4625-91cc-ec7795b1684b"/>
+  <targetRuleProject href="../../Level%202%20-%20Verify%20data#80dcb16e-bc15-4f23-a71a-432e06eaff8e"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

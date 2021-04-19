@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>copy input to output</name>
+  <uuid>1cc3ca54-b0e7-4476-8028-734532904ef5</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[-- Copy input
+set decision to 'Check contracts'  ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

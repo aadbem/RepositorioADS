@@ -1,0 +1,15 @@
+{
+  "financialInformation": {
+    "balance": 1000,
+    "debits": 250
+  },
+  "weatherForecast": "Heavy rain",
+  "guests": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+  ]
+}

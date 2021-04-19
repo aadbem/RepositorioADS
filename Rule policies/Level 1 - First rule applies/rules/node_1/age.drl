@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>age</name>
+  <uuid>a466d700-c2ff-4711-9227-f1697cfb0be9</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+    'Birth date' is after 4/24/1999
+then
+    set decision to false ;
+    print "Too young.";]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

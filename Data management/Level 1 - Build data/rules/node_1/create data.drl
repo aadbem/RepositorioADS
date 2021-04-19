@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>create data</name>
+  <uuid>a5fb1f72-af05-42c4-86f5-72a46dd0b65e</uuid>
+  <documentation><![CDATA[Complete the created data]]></documentation>
+  <locale>en_US</locale>
+  <definition><![CDATA[print " Create a new customer named " + 'First name' + " " + 'Last name';
+set decision to a new Customer where 
+    the contracts are {
+        a new Contract where 
+            the name is "Default contract" , 
+            the value is 25000 , 
+            the start date is 4/16/2020
+    } , 
+    the company is 'Company name' , 
+    the first name is 'First name' , 
+    the last name is 'Last name' ;
+
+
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>
