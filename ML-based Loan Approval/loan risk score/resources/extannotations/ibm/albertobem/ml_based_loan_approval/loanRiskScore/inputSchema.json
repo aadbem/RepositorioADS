@@ -30,5 +30,10 @@
     "type" : "double",
     "nullable" : true,
     "jsonName" : "yearlyReimbursement"
+  }, {
+    "name" : "field1",
+    "type" : "string",
+    "nullable" : true,
+    "jsonName" : "field1"
   } ]
 }

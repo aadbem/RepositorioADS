@@ -87,6 +87,7 @@ newtype3.newattribute1#phrase.navigation = {message} of {this}
 newtype3.newtype3(boolean,java.lang.String)#phrase.navigation = a new {approval} where {0, approved} {1, message}
 
 # newtype4
+newtype4#concept.documentation = SSN organized in area number - group code- serial number
 newtype4#concept.label = SSN
 newtype4.newattribute#phrase.action = set the area number of {this} to {area number}
 newtype4.newattribute#phrase.navigation = {area number} of {this}

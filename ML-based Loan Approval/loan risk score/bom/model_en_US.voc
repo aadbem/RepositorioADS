@@ -9,11 +9,13 @@ ibm.albertobem.ml_based_loan_approval.loanRiskScore.Error.message#phrase.navigat
 
 # ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input
 ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input#concept.label = ML model input
-ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.Input(java.lang.Double,java.lang.Double,java.lang.Double,java.lang.Double,java.lang.Double,java.lang.Double)#phrase.navigation = a new {ML model input} where {0, creditscore} {1, income} {2, loanamount} {3, monthduration} {4, rate} {5, yearlyreimbursement} 
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.Input(java.lang.Double,java.lang.String,java.lang.Double,java.lang.Double,java.lang.Double,java.lang.Double,java.lang.Double)#phrase.navigation = a new {ML model input} where {0, creditscore} {1, field1} {2, income} {3, loanamount} {4, monthduration} {5, rate} {6, yearlyreimbursement} 
 ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.creditscore#phrase.action = set the creditscore of {this} to {creditscore}
 ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.creditscore#phrase.addition_setter = add {creditscore} to the creditscore of {this}
 ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.creditscore#phrase.navigation = {creditscore} of {this}
 ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.creditscore#phrase.subtraction_setter = subtract {creditscore} from the creditscore of {this}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.field1#phrase.action = set the field1 of {this} to {field1}
+ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.field1#phrase.navigation = {field1} of {this}
 ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.income#phrase.action = set the income of {this} to {income}
 ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.income#phrase.addition_setter = add {income} to the income of {this}
 ibm.albertobem.ml_based_loan_approval.loanRiskScore.Input.income#phrase.navigation = {income} of {this}
