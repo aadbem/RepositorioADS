@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>modelPreditivoQuotacaoPreco</name>
+  <uuid>1b927584-005a-41a0-a5e6-126f989c51c0</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to predict( 'Input mapping' ) ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,19 @@
+{
+  "dadosEntrada": {
+    "CD_cliente": 1,
+    "CD_cotacao": 1,
+    "CD_produto_GAM": 1,
+    "CD_produto_cliente": "01",
+    "DESC_produto_GAM": "1",
+    "DESC_produto_cliente": "1",
+    "DT_cotacao": "1",
+    "MARCA_solicitada_cliente": "1",
+    "QT_solicitada": "01",
+    "UF": "1",
+    "Margem_Perc": "1.0",
+    "Observacao": "1",
+    "Valor_Caixa": "1.0",
+    "Valor_Margem": "1.0",
+    "Valor_Unitario": "1.0"
+  }
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>1db81584-fa5b-4be6-8fee-db5098944a1e</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Probabilidade Quotacao where
+		the CD_cliente is 1, 
+		the CD_cotacao is 1, 
+		the CD_produto_GAM is 1, 
+		the CD_produto_cliente is 1, 
+		the DESC_produto_GAM is "Teste GAM", 
+		the DESC_produto_cliente is "Teste Prod Cleinte", 
+		the DT_cotacao is "1", 
+		the MARCA_solicitada_cliente is "Marca Cliente", 
+		the QT_solicitada is 1, 
+		the UF is "SP", 
+		the Margem_Perc is 1, 
+		the Observacao is "Regra Default", 
+		the Valor_Caixa is 1, 
+		the Valor_Margem is 1, 
+		the Valor_Unitario is 1 ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

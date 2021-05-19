@@ -1,0 +1,43 @@
+{
+  "cotacao": {
+    "CD_Cliente": 43027,
+    "CD_Cotacao": 1,
+    "DT_Cotacao": "10.12.2020 00:00:00",
+    "Produtos": {
+      "CD_Produto_Cliente": 1135167,
+      "QT_Solicitada": 4,
+      "Desc_Produto_Cliente": "SULFAMETOXAZOL+TRIMETOPRIMA 200/40MG/5ML SUSP ORAL",
+      "Marca_Solicitada_Clientes": [
+        "BOEHRINGER",
+        "EMS",
+        "ROCHE"
+      ]
+    }
+  },
+  "produtosGAM": [
+    {
+      "CD_Produto_GAM": 14973,
+      "Desc_Produto_GAM": "SULFAM",
+      "Estoque": 10000,
+      "Marca_Produto": "ROCHE",
+      "Valor_Caixa": "3.8870",
+      "Valor_Margem": 1.1034,
+      "Valor_Unitario": "3.8870"
+    },
+    {
+      "CD_Produto_GAM": 14973,
+      "Desc_Produto_GAM": "SULFAMETOXAZOL+TRIMETOPRIMA 200/40MG/5ML SUSP ORAL",
+      "Estoque": 1000,
+      "Marca_Produto": "EMS",
+      "Valor_Caixa": "2.0000",
+      "Valor_Margem": 1.1034,
+      "Valor_Unitario": "2.0000"
+    }
+  ],
+  "cliente": {
+    "CD_Cliente": 43027,
+    "Atraso_Cliente": 0,
+    "Estado_Cliente": "SP",
+    "Tipo_Cliente": "Individual"
+  }
+}

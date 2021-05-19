@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Ajustando dados predicao</name>
+  <uuid>f41950af-f027-49bf-ac4b-690eff031b77</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Probabilidade Quotacao where
+		the CD_cliente is the CD_Cliente of Cliente , 
+		the CD_cotacao is the CD_Cotacao of Cotacao , 
+		the CD_produto_GAM is the CD_Produto_GAM of 'Produtos Cliente x GAM' , 
+		the CD_produto_cliente is the CD_Produto_Cliente of the Produtos of Cotacao , 
+	    the DESC_produto_GAM is the Desc_Produto_GAM of 'Produtos Cliente x GAM' , 
+		the DESC_produto_cliente is the Desc_Produto_Cliente of the Produtos of Cotacao, 
+		the DT_cotacao is the DT_Cotacao of Cotacao , 
+		the MARCA_solicitada_cliente is 'Ajustando Marca Cliente'  , 
+		the QT_solicitada is the Estoque of 'Produtos Cliente x GAM' , 
+		the UF is the Estado_Cliente of Cliente , 
+		the Margem_Perc is 'Calculo Margem', 
+		the Observacao is "", 
+		the Valor_Caixa is the Valor_Caixa of 'Produtos Cliente x GAM' , 
+		the Valor_Margem is the Valor_Margem of 'Produtos Cliente x GAM' , 
+		the Valor_Unitario is the Valor_Unitario of 'Produtos Cliente x GAM' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

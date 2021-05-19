@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Localizando produto GAM</name>
+  <uuid>3fa28270-fa40-41db-bbe0-9ccffb9d4fc9</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[for each Dados Produtos called 'ProdutoGAM', in 'Produtos GAM' 
+
+if 
+   the Desc_Produto_GAM of ProdutoGAM contains the Desc_Produto_Cliente of the Produtos of Cotacao   
+   and the Estoque of ProdutoGAM is at least the QT_Solicitada of the Produtos of Cotacao 
+   and the Marca_Produto of ProdutoGAM is one of the Marca_Solicitada_Clientes of the Produtos of Cotacao
+then
+   set decision to a new Dados Produtos where
+		the CD_Produto_GAM is the CD_Produto_GAM of ProdutoGAM , 
+		the Desc_Produto_GAM is the Desc_Produto_GAM of ProdutoGAM , 
+		the Estoque is the QT_Solicitada of the Produtos of Cotacao  , 
+		the Marca_Produto is the Marca_Produto of ProdutoGAM , 
+		the Valor_Caixa is the Valor_Caixa of ProdutoGAM , 
+		the Valor_Margem is the Valor_Margem of ProdutoGAM , 
+		the Valor_Unitario is the Valor_Unitario of ProdutoGAM ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Resultado probabilidade</name>
+  <uuid>0d610f12-0003-4691-bc63-538ba801dce9</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if 'ML model invocation' is in error 
+ then 
+set decision to a new Probabilidade Resultado where
+		the Probabilidade_Resultadoes are { 0 , 0}, 
+		the Tendencia_Resultado is "Erro" ;
+else 
+	set decision to a new Probabilidade Resultado where
+		the Probabilidade_Resultadoes are the probabilities of 'ML model invocation' ,  
+		the Tendencia_Resultado is the prediction of 'ML model invocation';]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

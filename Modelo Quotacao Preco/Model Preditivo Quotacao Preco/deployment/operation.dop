@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Model Preditivo Quotacao Preco">
+  <name>modelPreditivoQuotacaoPreco</name>
+  <uuid>e2d83b6d-a781-49a8-ad04-62c9b8aaefa3</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#1dcb7b1a-da36-4ddc-8a13-216e79c7b788"/>
+  <targetRuleProject href="../../Model%20Preditivo%20Quotacao%20Preco#1f49e2f6-2682-41f3-898e-2c9077d853c7"/>
+  <tags key="ProviderType">
+    <value><![CDATA[OPS]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Ajuste_Entrada</name>
+  <uuid>dd9a957b-79a2-4a4e-addc-695d2d5cc533</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new ML model input where
+		the cd cliente is the CD_cliente of 'Dados Entrada' , 
+		the cd cotacao is the CD_cotacao of 'Dados Entrada' , 
+		the cd produto cliente is the CD_produto_cliente of 'Dados Entrada' , 
+		the cd produto gam is the CD_produto_GAM of 'Dados Entrada' , 
+		the desc produto cliente is the DESC_produto_cliente of 'Dados Entrada' , 
+		the desc produto gam is the DESC_produto_GAM of 'Dados Entrada' , 
+		the dt cotacao is the DT_cotacao of 'Dados Entrada' , 
+		the marca solicitada cliente is the MARCA_solicitada_cliente of 'Dados Entrada' , 
+		the margem is the Margem_Perc of 'Dados Entrada'  , 
+		the observacoes is the Observacao of 'Dados Entrada' , 
+		the qt solicitada is the QT_solicitada of 'Dados Entrada' , 
+		the uf is the UF of 'Dados Entrada' , 
+		the valor caixa is the Valor_Caixa of 'Dados Entrada' , 
+		the valor margem is the Valor_Margem of 'Dados Entrada' , 
+		the valor unitario is the Valor_Unitario of 'Dados Entrada';]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

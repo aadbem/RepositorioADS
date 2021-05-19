@@ -1,0 +1,19 @@
+{
+  "dadosEntrada": {
+    "CD_cliente": 43027,
+    "CD_cotacao": 1,
+    "CD_produto_GAM": 23564,
+    "CD_produto_cliente": 1133481,
+    "DESC_produto_GAM": "NORIPURUM HOSP EV 100MG/5ML CX C/ 5 AMP",
+    "DESC_produto_cliente": "HIDROXIDO DE FERRO III 100MG/5ML EV",
+    "DT_cotacao": "28.08.2020 00:00:00",
+    "MARCA_solicitada_cliente": "NYCOMED PHARMA LTDA. / UNIAO QUIMICA",
+    "QT_solicitada": 25,
+    "UF": "SP",
+    "Margem_Perc": "3.0000",
+    "Observacao": "TESTE GANHOU",
+    "Valor_Caixa": "63.5830",
+    "Valor_Margem": 1.9075,
+    "Valor_Unitario": 12.7166
+  }
+}
