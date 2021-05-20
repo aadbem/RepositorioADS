@@ -1,0 +1,19 @@
+{
+  "dadosEntrada": {
+    "CD_cliente": 43027,
+    "CD_cotacao": 1,
+    "CD_produto_GAM": 14973,
+    "CD_produto_cliente": 1135167,
+    "DESC_produto_GAM": "SULFAMETOXAZOL+TRIMETOPRIMA 200/40MG/5ML SUSP ORAL",
+    "DESC_produto_cliente": "SULFAMETOXAZOL+TRIMETOPRIMA 200/40MG/5ML SUSP ORAL",
+    "DT_cotacao": "10.12.2020 00:00:00",
+    "MARCA_solicitada_cliente": "BOEHRINGER / EMS / ROCHE",
+    "QT_solicitada": 4,
+    "UF": "SP",
+    "Margem_Perc": 55.17,
+    "Observacao": "\"\"",
+    "Valor_Caixa": 2,
+    "Valor_Margem": 1.1034,
+    "Valor_Unitario": 2
+  }
+}

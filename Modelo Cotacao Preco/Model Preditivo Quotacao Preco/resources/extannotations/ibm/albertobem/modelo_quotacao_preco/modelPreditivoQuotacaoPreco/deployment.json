@@ -1,0 +1,28 @@
+{
+  "metadata" : {
+    "id" : "3122a28e-daf1-4c9a-854f-edc20fd5bf87",
+    "name" : "ML Deploy Quotacao Preco",
+    "modified_at" : "2021-05-15T22:44:50.135Z",
+    "created_at" : "2021-05-15T22:44:50.135Z",
+    "owner" : "IBMid-550004D38A",
+    "space_id" : "310560f9-0904-4b5f-bbd2-ee50a1c211b6"
+  },
+  "entity" : {
+    "name" : "ML Deploy Quotacao Preco",
+    "space_id" : "310560f9-0904-4b5f-bbd2-ee50a1c211b6",
+    "custom" : { },
+    "online" : { },
+    "status" : {
+      "state" : "ready",
+      "online_url" : {
+        "url" : "https://us-south.ml.cloud.ibm.com/ml/v4/deployments/3122a28e-daf1-4c9a-854f-edc20fd5bf87/predictions"
+      }
+    },
+    "asset" : {
+      "id" : "0bf061ab-841a-4746-879c-22d5ad1a53d1"
+    }
+  },
+  "name" : "ML Deploy Quotacao Preco",
+  "status" : "ready",
+  "deployedAt" : "2021-05-15T22:44:50.135Z"
+}

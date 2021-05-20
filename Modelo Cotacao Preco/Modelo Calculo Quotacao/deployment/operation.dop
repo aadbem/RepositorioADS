@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Modelo Calculo Quotacao">
+  <name>modeloCalculoQuotacao</name>
+  <uuid>86762199-db18-4e9c-a45a-0b3019110caf</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#56c29a76-b613-4867-beb7-8d1cc6122d56"/>
+  <targetRuleProject href="../../Modelo%20Calculo%20Quotacao#c80806e6-adcf-4b37-8e17-3c51ff42b75c"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

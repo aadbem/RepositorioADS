@@ -1,0 +1,33 @@
+{
+  "cotacao": {
+    "CD_Cliente": 43027,
+    "CD_Cotacao": 1,
+    "DT_Cotacao": "28.08.2020 00:00:00",
+    "Produtos": {
+      "CD_Produto_Cliente": 1133481,
+      "QT_Solicitada": 25,
+      "Desc_Produto_Cliente": "NORIPURUM HOSP EV 100MG",
+      "Marca_Solicitada_Clientes": [
+        "NYCOMED PHARMA LTDA.",
+        "UNIAO QUIMICA"
+      ]
+    }
+  },
+  "produtosGAM": [
+    {
+      "CD_Produto_GAM": 23564,
+      "Desc_Produto_GAM": "NORIPURUM HOSP EV 100MG/5ML CX C/ 5 AMP",
+      "Estoque": 10000,
+      "Marca_Produto": "UNIAO QUIMICA",
+      "Valor_Caixa": 63.583,
+      "Valor_Margem": 1.9075,
+      "Valor_Unitario": 12.7166
+    }
+  ],
+  "cliente": {
+    "CD_Cliente": 43027,
+    "Atraso_Cliente": 0,
+    "Estado_Cliente": "SP",
+    "Tipo_Cliente": "Individual"
+  }
+}

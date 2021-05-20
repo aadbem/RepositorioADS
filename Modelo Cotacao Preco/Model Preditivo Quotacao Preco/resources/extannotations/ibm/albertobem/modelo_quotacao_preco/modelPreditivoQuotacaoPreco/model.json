@@ -1,0 +1,87 @@
+{
+  "metadata" : {
+    "id" : "0bf061ab-841a-4746-879c-22d5ad1a53d1",
+    "name" : "ML AI Quotacao Preco - P3 RandomForestClassifier",
+    "description" : "Modelo indicado Auto IA",
+    "modified_at" : "2021-05-15T22:43:53.466Z",
+    "created_at" : "2021-05-15T22:43:53.271Z",
+    "owner" : "IBMid-550004D38A",
+    "space_id" : "310560f9-0904-4b5f-bbd2-ee50a1c211b6"
+  },
+  "entity" : {
+    "content_import_state" : "completed",
+    "type" : "wml-hybrid_0.1",
+    "schemas" : {
+      "input" : [ {
+        "id" : "auto_ai_kb_input_schema",
+        "fields" : [ {
+          "name" : "CD_COTAÇÃO",
+          "type" : "integer",
+          "nullable" : true
+        }, {
+          "name" : "DT_COTAÇÃO",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "CD_CLIENTE",
+          "type" : "integer",
+          "nullable" : true
+        }, {
+          "name" : "CD_PRODUTO_CLIENTE",
+          "type" : "integer",
+          "nullable" : true
+        }, {
+          "name" : "DESC_PRODUTO_CLIENTE",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "MARCA_SOLICITADA_CLIENTE",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "QT_SOLICITADA",
+          "type" : "integer",
+          "nullable" : true
+        }, {
+          "name" : "CD_PRODUTO_GAM",
+          "type" : "integer",
+          "nullable" : true
+        }, {
+          "name" : "DESC_PRODUTO_GAM",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "VALOR_UNITÁRIO",
+          "type" : "double",
+          "nullable" : true
+        }, {
+          "name" : "VALOR_CAIXA",
+          "type" : "double",
+          "nullable" : true
+        }, {
+          "name" : "VALOR_MARGEM",
+          "type" : "double",
+          "nullable" : true
+        }, {
+          "name" : "MARGEM_%",
+          "type" : "double",
+          "nullable" : true
+        }, {
+          "name" : "OBSERVAÇÕES",
+          "type" : "other",
+          "nullable" : true
+        }, {
+          "name" : "UF",
+          "type" : "other",
+          "nullable" : true
+        } ]
+      } ],
+      "output" : [ ]
+    }
+  },
+  "id" : "0bf061ab-841a-4746-879c-22d5ad1a53d1",
+  "name" : "ML AI Quotacao Preco - P3 RandomForestClassifier",
+  "description" : "Modelo indicado Auto IA",
+  "trainedAt" : "2021-05-15T22:43:53.271Z",
+  "modifiedAt" : "2021-05-15T22:43:53.466Z"
+}

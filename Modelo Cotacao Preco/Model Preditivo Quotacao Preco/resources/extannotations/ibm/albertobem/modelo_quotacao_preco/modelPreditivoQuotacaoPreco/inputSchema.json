@@ -1,0 +1,79 @@
+{
+  "id" : "auto_ai_kb_input_schema",
+  "fields" : [ {
+    "name" : "CD_COTAÇÃO",
+    "type" : "integer",
+    "nullable" : true,
+    "jsonName" : "CD_COTAÇÃO"
+  }, {
+    "name" : "DT_COTAÇÃO",
+    "type" : "string",
+    "nullable" : true,
+    "jsonName" : "DT_COTAÇÃO"
+  }, {
+    "name" : "CD_CLIENTE",
+    "type" : "integer",
+    "nullable" : true,
+    "jsonName" : "CD_CLIENTE"
+  }, {
+    "name" : "CD_PRODUTO_CLIENTE",
+    "type" : "integer",
+    "nullable" : true,
+    "jsonName" : "CD_PRODUTO_CLIENTE"
+  }, {
+    "name" : "DESC_PRODUTO_CLIENTE",
+    "type" : "string",
+    "nullable" : true,
+    "jsonName" : "DESC_PRODUTO_CLIENTE"
+  }, {
+    "name" : "MARCA_SOLICITADA_CLIENTE",
+    "type" : "string",
+    "nullable" : true,
+    "jsonName" : "MARCA_SOLICITADA_CLIENTE"
+  }, {
+    "name" : "QT_SOLICITADA",
+    "type" : "integer",
+    "nullable" : true,
+    "jsonName" : "QT_SOLICITADA"
+  }, {
+    "name" : "CD_PRODUTO_GAM",
+    "type" : "integer",
+    "nullable" : true,
+    "jsonName" : "CD_PRODUTO_GAM"
+  }, {
+    "name" : "DESC_PRODUTO_GAM",
+    "type" : "string",
+    "nullable" : true,
+    "jsonName" : "DESC_PRODUTO_GAM"
+  }, {
+    "name" : "VALOR_UNITÁRIO",
+    "type" : "double",
+    "nullable" : true,
+    "jsonName" : "VALOR_UNITÁRIO"
+  }, {
+    "name" : "VALOR_CAIXA",
+    "type" : "double",
+    "nullable" : true,
+    "jsonName" : "VALOR_CAIXA"
+  }, {
+    "name" : "VALOR_MARGEM",
+    "type" : "double",
+    "nullable" : true,
+    "jsonName" : "VALOR_MARGEM"
+  }, {
+    "name" : "MARGEM_%",
+    "type" : "double",
+    "nullable" : true,
+    "jsonName" : "MARGEM_%"
+  }, {
+    "name" : "OBSERVAÇÕES",
+    "type" : "string",
+    "nullable" : true,
+    "jsonName" : "OBSERVAÇÕES"
+  }, {
+    "name" : "UF",
+    "type" : "string",
+    "nullable" : true,
+    "jsonName" : "UF"
+  } ]
+}

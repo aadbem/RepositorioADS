@@ -1,0 +1,37 @@
+{
+  "cotacao": {
+    "CD_Cliente": 43027,
+    "CD_Cotacao": 1,
+    "DT_Cotacao": "28.08.2020 00:00:00",
+    "Produtos": {
+      "CD_Produto_Cliente": 1131572,
+      "QT_Solicitada": 120,
+      "Desc_Produto_Cliente": "ATENOLOL 25MG",
+      "Marca_Solicitada_Clientes": [
+        "BIOSINTETICA(G)",
+        "CRISTALIA(G)",
+        "EMS(GERMED (G)",
+        "MEDLEY(G)",
+        "PRATI(G)",
+        "SANDOZ(G)"
+      ]
+    }
+  },
+  "produtosGAM": [
+    {
+      "CD_Produto_GAM": 17510,
+      "Desc_Produto_GAM": "ATENOLOL 25MG",
+      "Estoque": 10000,
+      "Marca_Produto": "MEDLEY(G)",
+      "Valor_Caixa": 3.861,
+      "Valor_Margem": 1.8557474,
+      "Valor_Unitario": 0.1287
+    }
+  ],
+  "cliente": {
+    "CD_Cliente": 43027,
+    "Atraso_Cliente": 0,
+    "Estado_Cliente": "SP",
+    "Tipo_Cliente": "Rede"
+  }
+}

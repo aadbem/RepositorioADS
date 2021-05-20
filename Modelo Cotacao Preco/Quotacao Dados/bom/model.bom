@@ -1,0 +1,340 @@
+
+
+public class CotacaoCliente
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Cotacao Cliente"
+        property "de.generated" "true"
+{
+    public java.lang.Long CD_Cliente
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "CD_Cliente"
+                property update "true";
+    public java.lang.Long CD_Cotacao
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "CD_Cotacao"
+                property update "true";
+    public string DT_Cotacao
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "DT_Cotacao"
+                property update "true";
+    public Cotacao_Produto produtos
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Produtos"
+                property update "true";
+    public CotacaoCliente(java.lang.Long CD_Cliente, java.lang.Long CD_Cotacao, string DT_Cotacao, Cotacao_Produto produtos)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public CotacaoCliente()
+                property "dataio.default" "true";
+}
+
+public class Cotacao_Produto
+        property "ads.typeId" "4"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Cotacao_Produto"
+        property "de.generated" "true"
+{
+    public java.lang.Long CD_Produto_Cliente
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "CD_Produto_Cliente"
+                property update "true";
+    public java.lang.Long QT_Solicitada
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "QT_Solicitada"
+                property update "true";
+    public string desc_Produto_Cliente
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Desc_Produto_Cliente"
+                property update "true";
+    public java.util.List marca_Solicitada_Clientes domain 0,* class string
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Marca_Solicitada_Clientes"
+                property update "true";
+    public Cotacao_Produto(java.lang.Long CD_Produto_Cliente, 
+        java.lang.Long QT_Solicitada, 
+        string desc_Produto_Cliente, 
+        java.util.List marca_Solicitada_Clientes domain 0,* class string)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Cotacao_Produto()
+                property "dataio.default" "true";
+    public void addTo_marca_Solicitada_Clientes(string marca_Solicitada_Clientes)
+                property collectionAttribute "marca_Solicitada_Clientes"
+                property update "true";
+    public void clear_marca_Solicitada_Clientes()
+                property collectionAttribute "marca_Solicitada_Clientes"
+                property update "true";
+    public void removeFrom_marca_Solicitada_Clientes(string marca_Solicitada_Clientes)
+                property collectionAttribute "marca_Solicitada_Clientes"
+                property update "true";
+    public void set_marca_Solicitada_Clientes(java.util.Collection marca_Solicitada_Clientes domain 0,* class string)
+                property collectionAttribute "marca_Solicitada_Clientes"
+                property update "true";
+}
+
+public class DadosCliente
+        property "ads.typeId" "5"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Dados Cliente"
+        property "de.generated" "true"
+{
+    public java.lang.Long CD_Cliente
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "CD_Cliente"
+                property update "true";
+    public java.lang.Long atraso_Cliente
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Atraso_Cliente"
+                property update "true";
+    public string estado_Cliente
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Estado_Cliente"
+                property update "true";
+    public string tipo_Cliente
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Tipo_Cliente"
+                property update "true";
+    public DadosCliente(java.lang.Long CD_Cliente, java.lang.Long atraso_Cliente, string estado_Cliente, string tipo_Cliente)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public DadosCliente()
+                property "dataio.default" "true";
+}
+
+public class DadosProdutos
+        property "ads.typeId" "6"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Dados Produtos"
+        property "de.generated" "true"
+{
+    public java.lang.Long CD_Produto_GAM
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "CD_Produto_GAM"
+                property update "true";
+    public string desc_Produto_GAM
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Desc_Produto_GAM"
+                property update "true";
+    public java.lang.Long estoque
+                property "ads.attributeId" "6"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Estoque"
+                property update "true";
+    public string marca_Produto
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Marca_Produto"
+                property update "true";
+    public double valor_Caixa
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Valor_Caixa"
+                property update "true";
+    public double valor_Margem
+                property "ads.attributeId" "7"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Valor_Margem"
+                property update "true";
+    public double valor_Unitario
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Valor_Unitario"
+                property update "true";
+    public DadosProdutos(java.lang.Long CD_Produto_GAM, string desc_Produto_GAM, java.lang.Long estoque, string marca_Produto, double valor_Caixa, double valor_Margem, double valor_Unitario)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public DadosProdutos()
+                property "dataio.default" "true";
+}
+
+public class ProbabilidadeQuotacao
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Probabilidade Quotacao"
+        property "de.generated" "true"
+{
+    public java.lang.Long CD_cliente
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "CD_cliente"
+                property update "true";
+    public java.lang.Long CD_cotacao
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "CD_cotacao"
+                property update "true";
+    public java.lang.Long CD_produto_GAM
+                property "ads.attributeId" "8"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "CD_produto_GAM"
+                property update "true";
+    public java.lang.Long CD_produto_cliente
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "CD_produto_cliente"
+                property update "true";
+    public string DESC_produto_GAM
+                property "ads.attributeId" "9"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "DESC_produto_GAM"
+                property update "true";
+    public string DESC_produto_cliente
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "DESC_produto_cliente"
+                property update "true";
+    public string DT_cotacao
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "DT_cotacao"
+                property update "true";
+    public string MARCA_solicitada_cliente
+                property "ads.attributeId" "6"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "MARCA_solicitada_cliente"
+                property update "true";
+    public java.lang.Long QT_solicitada
+                property "ads.attributeId" "7"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "QT_solicitada"
+                property update "true";
+    public string UF
+                property "ads.attributeId" "15"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "UF"
+                property update "true";
+    public double margem_Perc
+                property "ads.attributeId" "13"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Margem_Perc"
+                property update "true";
+    public string observacao
+                property "ads.attributeId" "14"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Observacao"
+                property update "true";
+    public double valor_Caixa
+                property "ads.attributeId" "11"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Valor_Caixa"
+                property update "true";
+    public double valor_Margem
+                property "ads.attributeId" "12"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Valor_Margem"
+                property update "true";
+    public double valor_Unitario
+                property "ads.attributeId" "10"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Valor_Unitario"
+                property update "true";
+    public ProbabilidadeQuotacao(java.lang.Long CD_cliente, 
+        java.lang.Long CD_cotacao, 
+        java.lang.Long CD_produto_GAM, 
+        java.lang.Long CD_produto_cliente, 
+        string DESC_produto_GAM, 
+        string DESC_produto_cliente, 
+        string DT_cotacao, 
+        string MARCA_solicitada_cliente, 
+        java.lang.Long QT_solicitada, 
+        string UF, 
+        double margem_Perc, 
+        string observacao, 
+        double valor_Caixa, 
+        double valor_Margem, 
+        double valor_Unitario)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public ProbabilidadeQuotacao()
+                property "dataio.default" "true";
+}
+
+public class ProbabilidadeResultado
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Probabilidade Resultado"
+        property "de.generated" "true"
+{
+    public java.util.List probabilidade_Resultadoes domain 0,* class double
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Probabilidade_Resultadoes"
+                property update "true";
+    public string tendencia_Resultado
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Tendencia_Resultado"
+                property update "true";
+    public ProbabilidadeResultado(java.util.List probabilidade_Resultadoes domain 0,* class double, 
+        string tendencia_Resultado)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public ProbabilidadeResultado()
+                property "dataio.default" "true";
+    public void addTo_probabilidade_Resultadoes(double probabilidade_Resultadoes)
+                property collectionAttribute "probabilidade_Resultadoes"
+                property update "true";
+    public void clear_probabilidade_Resultadoes()
+                property collectionAttribute "probabilidade_Resultadoes"
+                property update "true";
+    public void removeFrom_probabilidade_Resultadoes(double probabilidade_Resultadoes)
+                property collectionAttribute "probabilidade_Resultadoes"
+                property update "true";
+    public void set_probabilidade_Resultadoes(java.util.Collection probabilidade_Resultadoes domain 0,* class double)
+                property collectionAttribute "probabilidade_Resultadoes"
+                property update "true";
+}
+
+public class Resultado_Cotacao
+        property "ads.typeId" "7"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "Resultado_Cotacao"
+        property "de.generated" "true"
+{
+    public java.lang.Long CD_Produto_GAM
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "CD_Produto_GAM"
+                property update "true";
+    public string desc_Produto_GAM
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Desc_Produto_GAM"
+                property update "true";
+    public boolean erro_dados
+                property "ads.attributeId" "11"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Erro_dados"
+                property update "true";
+    public string marca_Produto
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Marca_Produto"
+                property update "true";
+    public string observacao
+                property "ads.attributeId" "10"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Observacao"
+                property update "true";
+    public double percentual_Margem
+                property "ads.attributeId" "8"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Percentual_Margem"
+                property update "true";
+    public java.lang.Long qt_Calculada
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Qt_Calculada"
+                property update "true";
+    public ProbabilidadeResultado resultado_Probabilidade
+                property "ads.attributeId" "9"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Resultado_Probabilidade"
+                property update "true";
+    public double valor_Caixa
+                property "ads.attributeId" "6"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Valor_Caixa"
+                property update "true";
+    public double valor_Margem
+                property "ads.attributeId" "7"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Valor_Margem"
+                property update "true";
+    public double valor_Unitario
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Valor_Unitario"
+                property update "true";
+    public Resultado_Cotacao(java.lang.Long CD_Produto_GAM, 
+        string desc_Produto_GAM, 
+        boolean erro_dados, 
+        string marca_Produto, 
+        string observacao, 
+        double percentual_Margem, 
+        java.lang.Long qt_Calculada, 
+        ProbabilidadeResultado resultado_Probabilidade, 
+        double valor_Caixa, 
+        double valor_Margem, 
+        double valor_Unitario)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Resultado_Cotacao()
+                property "dataio.default" "true";
+}
+

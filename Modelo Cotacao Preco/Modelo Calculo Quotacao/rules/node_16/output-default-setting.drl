@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>1a93ae5a-b5ef-4767-8d8c-3187f0036f04</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Probabilidade Resultado where
+		the Probabilidade_Resultadoes are {0,0}, 
+		the Tendencia_Resultado is "Default" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>Decisao Cotacao base</name>
+  <uuid>a743141d-403a-41d3-ac03-7760bb9830f4</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[set decision to a new Resultado_Cotacao where
+		the CD_Produto_GAM is the CD_produto_GAM of 'Ajuste Dados Predicao' , 
+		the Desc_Produto_GAM is the DESC_produto_GAM of 'Ajuste Dados Predicao' , 
+		Erro_dados is 'Cliente Tem Pendencias Financeira', 
+        the Marca_Produto is the MARCA_solicitada_cliente of 'Ajuste Dados Predicao',
+		the Observacao is the Observacao of 'Ajuste Dados Predicao' , 
+		the Percentual_Margem is the Margem_Perc of 'Ajuste Dados Predicao' , 
+		the Qt_Calculada is the QT_solicitada of 'Ajuste Dados Predicao', 
+		the Resultado_Probabilidade is 'Preco Quotacao', 
+		the Valor_Caixa is the Valor_Caixa of 'Ajuste Dados Predicao' , 
+		the Valor_Margem is the Valor_Margem of 'Ajuste Dados Predicao' , 
+		the Valor_Unitario is the Valor_Unitario of 'Ajuste Dados Predicao' ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>
