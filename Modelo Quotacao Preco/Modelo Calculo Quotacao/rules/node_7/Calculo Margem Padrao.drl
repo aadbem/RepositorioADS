@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
-  <name>Calculo Margem Padrao</name>
-  <uuid>aaf57943-0811-4b42-b977-037a04a1601b</uuid>
-  <locale>en_US</locale>
-  <definition><![CDATA[set decision to round ((the Valor_Margem of 'Produtos Cliente x GAM' / the Valor_Caixa of 'Produtos Cliente x GAM') * 100,6) ;]]></definition>
-</ilog.rules.studio.model.brl:ActionRule>

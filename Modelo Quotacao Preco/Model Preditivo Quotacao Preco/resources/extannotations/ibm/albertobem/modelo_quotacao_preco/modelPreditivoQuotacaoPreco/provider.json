@@ -1,9 +1,0 @@
-{
-  "name" : "ibm/albertobem/ML Quotacao Preco1621270109661",
-  "type" : "WML",
-  "description" : "Modelo Previsao Quotacao Preco",
-  "mlUrl" : "https://us-south.ml.cloud.ibm.com/ml/v4/",
-  "authUrl" : "https://iam.bluemix.net/identity/token",
-  "instanceId" : "310560f9-0904-4b5f-bbd2-ee50a1c211b6",
-  "apiKey" : null
-}
