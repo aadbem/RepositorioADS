@@ -26,8 +26,9 @@
   ],
   "cliente": {
     "CD_Cliente": 43027,
-    "Atraso_Cliente": 0,
+    "Atraso_Cliente": 10,
     "Estado_Cliente": "SP",
     "Tipo_Cliente": "Individual"
-  }
+  },
+  "demandaAlta": true
 }

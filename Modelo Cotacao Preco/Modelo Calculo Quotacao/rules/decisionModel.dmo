@@ -102,11 +102,15 @@
         <description>Deve buscar cotar produtos que estão com muitos dias em estoque</description>
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="java.lang.Boolean" collection="false" name="Demanda Alta"/>
                 <input bomType="java.lang.String" collection="false" name="Validade do Produto"/>
                 <output bomType="java.lang.String" collection="false" name="Produtos Baixo Giro"/>
             </ruleset>
         </extensionElements>
         <variable id="node_8_ii" name="Produtos Baixo Giro" typeRef="java.lang.String"/>
+        <informationRequirement>
+            <requiredInput href="#node_19"/>
+        </informationRequirement>
         <informationRequirement>
             <requiredInput href="#node_6"/>
         </informationRequirement>
@@ -218,6 +222,14 @@
             <requiredInput href="#node_0"/>
         </informationRequirement>
     </decision>
+    <inputData id="node_19" name="Demanda Alta">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="java.lang.Boolean" collection="false" name="Demanda Alta"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_19_ii" name="Demanda Alta" typeRef="java.lang.Boolean"/>
+    </inputData>
     <businessKnowledgeModel id="node_13" name="Model Preditivo Quotacao Preco">
         <extensionElements>
             <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
