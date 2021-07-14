@@ -7,7 +7,7 @@
     "jsonName" : "CD_COTAÇÃO"
   }, {
     "name" : "DT_COTAÇÃO",
-    "type" : "string",
+    "type" : "other",
     "nullable" : true,
     "jsonName" : "DT_COTAÇÃO"
   }, {
@@ -22,12 +22,12 @@
     "jsonName" : "CD_PRODUTO_CLIENTE"
   }, {
     "name" : "DESC_PRODUTO_CLIENTE",
-    "type" : "string",
+    "type" : "other",
     "nullable" : true,
     "jsonName" : "DESC_PRODUTO_CLIENTE"
   }, {
     "name" : "MARCA_SOLICITADA_CLIENTE",
-    "type" : "string",
+    "type" : "other",
     "nullable" : true,
     "jsonName" : "MARCA_SOLICITADA_CLIENTE"
   }, {
@@ -42,7 +42,7 @@
     "jsonName" : "CD_PRODUTO_GAM"
   }, {
     "name" : "DESC_PRODUTO_GAM",
-    "type" : "string",
+    "type" : "other",
     "nullable" : true,
     "jsonName" : "DESC_PRODUTO_GAM"
   }, {
@@ -67,12 +67,12 @@
     "jsonName" : "MARGEM_%"
   }, {
     "name" : "OBSERVAÇÕES",
-    "type" : "string",
+    "type" : "other",
     "nullable" : true,
     "jsonName" : "OBSERVAÇÕES"
   }, {
     "name" : "UF",
-    "type" : "string",
+    "type" : "other",
     "nullable" : true,
     "jsonName" : "UF"
   } ]

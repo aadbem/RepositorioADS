@@ -20,11 +20,11 @@
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
                 <input bomType="ProbabilidadeQuotacao" collection="false" name="Dados Entrada"/>
-                <output bomType="ibm.albertobem.modelo_quotacao_preco.modelPreditivoQuotacaoPreco.Input" collection="false" name="Input mapping"/>
+                <output bomType="ibm.albertobem.modelo_cotacao_preco.modelPreditivoQuotacaoPreco.Input" collection="false" name="Input mapping"/>
                 <rule defaultRule="false" href="input-mapping/Ajuste_Entrada.drl" kind="BusinessRule" name="Ajuste_Entrada"/>
             </ruleset>
         </extensionElements>
-        <variable id="input_mapping_ii" name="Input mapping" typeRef="ibm.albertobem.modelo_quotacao_preco.modelPreditivoQuotacaoPreco.Input"/>
+        <variable id="input_mapping_ii" name="Input mapping" typeRef="ibm.albertobem.modelo_cotacao_preco.modelPreditivoQuotacaoPreco.Input"/>
         <informationRequirement>
             <requiredInput href="#input"/>
         </informationRequirement>
@@ -33,15 +33,15 @@
         <description>ML model output</description>
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="ibm.albertobem.modelo_quotacao_preco.modelPreditivoQuotacaoPreco.Input" collection="false" name="Input mapping"/>
-                <output bomType="ibm.albertobem.modelo_quotacao_preco.modelPreditivoQuotacaoPreco.Output" collection="false" name="ML model invocation"/>
+                <input bomType="ibm.albertobem.modelo_cotacao_preco.modelPreditivoQuotacaoPreco.Input" collection="false" name="Input mapping"/>
+                <output bomType="ibm.albertobem.modelo_cotacao_preco.modelPreditivoQuotacaoPreco.Output" collection="false" name="ML model invocation"/>
                 <rule defaultRule="false" href="decisionModel.drl" kind="BusinessRule" name="Prediction"/>
             </ruleset>
             <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
                 <property name="ads.designer.predictionInvocation"><![CDATA[true]]></property>
             </properties>
         </extensionElements>
-        <variable id="output_ii" name="ML model invocation" typeRef="ibm.albertobem.modelo_quotacao_preco.modelPreditivoQuotacaoPreco.Output"/>
+        <variable id="output_ii" name="ML model invocation" typeRef="ibm.albertobem.modelo_cotacao_preco.modelPreditivoQuotacaoPreco.Output"/>
         <informationRequirement>
             <requiredInput href="#input-mapping"/>
         </informationRequirement>
@@ -49,7 +49,7 @@
     <decision id="output-mapping" name="Output mapping">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="ibm.albertobem.modelo_quotacao_preco.modelPreditivoQuotacaoPreco.Output" collection="false" name="ML model invocation"/>
+                <input bomType="ibm.albertobem.modelo_cotacao_preco.modelPreditivoQuotacaoPreco.Output" collection="false" name="ML model invocation"/>
                 <output bomType="ProbabilidadeResultado" collection="false" name="Output mapping"/>
                 <rule defaultRule="false" href="output-mapping/Resultado%20probabilidade.drl" kind="BusinessRule" name="Resultado probabilidade"/>
             </ruleset>

@@ -1,5 +1,5 @@
 
-package ibm.albertobem.modelo_quotacao_preco.modelPreditivoQuotacaoPreco;
+package ibm.albertobem.modelo_cotacao_preco.modelPreditivoQuotacaoPreco;
 
 
 public class Error
@@ -101,7 +101,7 @@ public class Output
         }
         property "de.generated" "true"
 {
-    public ibm.albertobem.modelo_quotacao_preco.modelPreditivoQuotacaoPreco.Error error
+    public ibm.albertobem.modelo_cotacao_preco.modelPreditivoQuotacaoPreco.Error error
                 property "ads.attributeId" "3"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "error";
     public string prediction
@@ -132,20 +132,20 @@ public class Output
     public void removeFrom_probability(java.lang.Double probability)
                 property collectionAttribute "probability"
                 property update "true";
-    public static Output run(ibm.albertobem.modelo_quotacao_preco.modelPreditivoQuotacaoPreco.Input input)
+    public static Output run(ibm.albertobem.modelo_cotacao_preco.modelPreditivoQuotacaoPreco.Input input)
                 property "de.generated" {
                     $gen "com.ibm.decision.ml.integration.client.wml.xom.PredictionCallGenerator",
                     $target "BOM",
                     deploymentId "3122a28e-daf1-4c9a-854f-edc20fd5bf87",
-                    providerName "ibm/albertobem/ML Quotacao Preco1621270109661"
+                    providerName "ibm/albertobem/ML Quotacao Preco1622663020376"
                 }
                 property pureFunction "true";
-    public static Output run(com.ibm.decision.run.RunContext runContext, ibm.albertobem.modelo_quotacao_preco.modelPreditivoQuotacaoPreco.Input input)
+    public static Output run(com.ibm.decision.run.RunContext runContext, ibm.albertobem.modelo_cotacao_preco.modelPreditivoQuotacaoPreco.Input input)
                 property "de.generated" {
                     $gen "com.ibm.decision.ml.integration.client.wml.xom.PredictionRunGenerator",
                     $target "BOM",
                     deploymentId "3122a28e-daf1-4c9a-854f-edc20fd5bf87",
-                    providerName "ibm/albertobem/ML Quotacao Preco1621270109661"
+                    providerName "ibm/albertobem/ML Quotacao Preco1622663020376"
                 }
                 property pureFunction "true";
     public void set_probability(java.util.Collection probability domain 0,* class java.lang.Double)

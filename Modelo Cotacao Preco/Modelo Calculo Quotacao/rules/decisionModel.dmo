@@ -91,6 +91,7 @@
                 <output bomType="java.lang.Double" collection="false" name="Calculo Margem"/>
                 <rule defaultRule="true" href="node_7/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
                 <rule defaultRule="false" href="node_7/Calculo%20Margem%20Padrao.drl" kind="BusinessRule" name="Calculo Margem Padrao"/>
+                <rule defaultRule="false" href="node_7/Teste.dmt" kind="DecisionTable" name="Teste"/>
             </ruleset>
         </extensionElements>
         <variable id="node_7_ii" name="Calculo Margem" typeRef="java.lang.Double"/>
